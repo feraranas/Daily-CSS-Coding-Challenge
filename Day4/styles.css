@@ -1,0 +1,104 @@
+body {
+     background-image: url('https://images.unsplash.com/photo-1600207954108-1041586b18cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 100vh;
+ }
+ 
+ .MainContainer {
+     display: grid;
+     align-items: center;
+ }
+ 
+ header {
+   background-color: rgba(255, 255, 255, 0);
+   padding: 20px;
+   color: white;
+ }
+ 
+ nav ul {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   list-style: none;
+ }
+ 
+ nav ul li {
+   margin-right: 25px;
+ }
+ 
+ nav ul li a {
+   color: white;
+   text-decoration: none;
+ }
+ 
+ button.CreateAccount {
+   background-color: #EA9E39;
+   border-radius: 5px;
+   padding-top: 10px;
+   padding-right: 15px;
+   padding-left: 15px;
+   padding-bottom: 10px;
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+ }
+ 
+ .Welcome {
+     padding: 0px 60px;
+     color: white;
+     text-align: center;
+     max-width: 680px;
+     margin: 0 auto;
+     margin-top: 75px;
+     margin-bottom: 30px;
+ }
+ 
+ .Title {
+     font-size: 45px;
+     display: grid;
+     margin-bottom: 15px;
+     justify-content: center;
+ }
+ 
+ .Paragraph {
+     display: grid;
+     justify-content: center;
+     font-size: 10px;
+ }
+ 
+ .FormContainer {
+   justify-content: center;
+ }
+ 
+ form {
+     display: grid;
+     grid-template-columns: 0.5fr 4fr 1fr;
+     margin-top: 10px;
+     margin: 0px 45px;
+     border-radius: 10px;
+     color: white;
+     max-width: 1200px;
+     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+ }
+ 
+ .SearchIcon {
+     display: grid;
+     background-color: rgba(0, 0, 0, 0.5);
+     align-items: center;
+     justify-content: center;
+     grid: 0.5;
+     border-radius: 5px 0px 0px 5px;
+     
+ }
+ 
+ input[type=text] {
+     background-color: rgba(0, 0, 0, 0.5);
+     grid: 2;
+ }
+ 
+ input[type=submit] {
+     background-color: #4C86D7;
+     border-radius: 0px 5px 5px 0px;
+     padding: 10px 0px 10px 0px;
+ }
+ 
