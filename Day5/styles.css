@@ -1,0 +1,131 @@
+/* Add CSS here */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body {
+    display: grid;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.MainContainer {
+    display: grid;
+    grid-template-rows: 0.25fr 4fr 0.25fr;
+    background-color: #2A3350;
+    border-radius: 10px;
+    color: white;
+    padding: 29px;
+    max-width: 500px;
+    max-height: 750px;
+    min-height: 750px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    padding-bottom: 25px;
+}
+
+.MultipleAnnouncements{
+    border-radius: inherit;
+    max-height: 95%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    display: grid;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+/* Webkit-based browsers (Chrome, Safari) */
+.MultipleAnnouncements::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+    background-color: transparent; /* Background color of the scrollbar track */
+}
+
+.MultipleAnnouncements::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Color of the scrollbar thumb */
+}
+
+/* Firefox */
+.MultipleAnnouncements {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.MultipleAnnouncements::-moz-scrollbar {
+    width: 6px;
+    background-color: transparent;
+}
+
+.MultipleAnnouncements::-moz-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.Announcement {
+    display: grid;
+    border-radius: inherit;
+    grid-template-rows: 1fr 1fr;
+    background-color: #1E263D;
+    padding: 15px 15px 15px 15px;
+}
+
+.Announcement:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.AnnouncementRowTop {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 0.2fr;
+}
+.AnnouncementRowBottom {
+    font-weight: bold;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 0.6fr;
+}
+
+.dots {
+    padding-left: 10px;
+    padding-bottom: 25px;
+}
+
+.UserIdentifier {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    align-items: center;
+    color: #707B9F;
+    font-weight: 1000;
+}
+
+.time {
+    color: #707B9F;
+}
+
+img{
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: #707B9F;
+    height: 45px;
+    width: 45px;
+}
+
+.CenterButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Dismiss {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    background-color: #4E91F7;
+    font-family: inherit; 
+    font-weight: bold;
+}
