@@ -3,18 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <script>
+        const divElement = document.querySelector('.Form');
+        function createRadioSelector() {
+            const radioSelector = document.createElement("p");
+            radioSelector.textContent = "casdfasd";
+            divElement.appendChild(radioSelector);
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const buttons = document.querySelector('button[type="radio"]');
+            for (const button of buttons) {
+            button.addEventListener("click", createRadioSelector);
+            }
+        })
+    </script>
+
+    <style>
+        body {
+            display:grid;
+            height:100vh;
+            justify-content:center;
+            align-items:center;
+        }
+
+        main {
+            display:grid;
+        }
+
+        .Form {
+            display:grid;
+            grid-template-columns:0.5fr 2fr 0.5fr;
+            align-items:center;
+            background-color:#F2F2F2;
+            border-radius:2.5px;
+        }
+
+        button[type=radio] {
+            display:grid;
+            justify-content:center;
+            padding:10px;
+            height:30px;
+        }
+
+        input[type=text] {   
+            margin-right:5px;         
+            padding:10px;
+            height:30px;
+        }
+        button[type=submit] {
+            padding:10px;
+            border-radius:2.5px;
+            justify-content:center;
+            background-color:#4AB1EF;
+            background-color:linear-gradient(to right,#4AB1EF, #409FEC);
+        }
+    </style>
 </head>
 
 <body>
-     <main>
-         
-         <div class="Form">
-             <button type="radio"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" /></svg></button>
-             <input type="text" placeholder="Search" />
-             <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search" viewBox="0 0 16 16"> <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" /></svg></button>
-         </div>
-     </main>
- </body>
- </html>
+    <main>
+        
+        <div class="Form">
+            <button type="radio"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" /></svg></button>
+            <input type="text" placeholder="Search" />
+            <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search" viewBox="0 0 16 16"> <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" /></svg></button>
+        </div>
+    </main>
+</body>
 
+</html>
