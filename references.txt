@@ -1,0 +1,16 @@
+HTML & CSS
+     - Creating a layered card with HTML & CSS : https://www.youtube.com/watch?v=TskEjH6VkSM
+     - CSS Grid Tutorial: Responsive Design Examples : https://www.youtube.com/watch?v=pMVO1OPfVJ8
+
+REACT & STYLED COMPONENTS
+     - 8 awesome features of styled-components : https://blog.logrocket.com/8-awesome-features-of-styled-components/#:~:text=className%20.,to%20the%20styled()%20function.&text=This%20will%20style%20the%20button,styling%20in%20the%20template%20literal.
+     - Styled components Tutorial Part1: Tips and tricks for styling login forms : https://www.youtube.com/watch?v=A35oMQCAtBI
+     - React JSON Filters : https://codesandbox.io/s/react-json-filtering-forked-c7n9n7?file=/src/components/CardList.jsx
+
+Javascript
+     - What is Javascript : https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript
+     - What are Browser Developer Tools : https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console
+     
+
+DYNAMIC PROGRAMMING
+     - Dynamic Programming : https://www.youtube.com/watch?v=oBt53YbR9Kk

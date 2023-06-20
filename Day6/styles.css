@@ -1,0 +1,99 @@
+/* Add CSS here */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&family=Poppins:wght@100;200,300,400&display=swap');
+
+
+body {
+    background-color: #2D233E;
+    display: grid;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+}
+.Container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 75%;
+    margin: auto;
+    border-radius: 25px;
+    color: white;
+}
+
+.First {
+    display: grid;
+    grid-template-rows: 0.1fr 0.1fr 2fr 0.1fr;
+    background-color: #8A7EF6;
+    padding: 45px 25px 35px 25px;
+    border-radius: 5px 0px 0px 5px;
+}
+.Second {
+    display: grid;
+    grid-template-rows: 0.1fr 0.1fr 2fr 0.1fr;
+    background-color: #BB7EF7;
+    padding: 45px 25px 35px 25px;
+}
+.Third {
+    display: grid;
+    grid-template-rows: 0.1fr 0.1fr 2fr 0.1fr;
+    background-color: #EE7BB9;
+    padding: 45px 25px 35px 25px;
+    border-radius: 0px 5px 5px 0px;
+}
+.type {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    opacity: 0.65;
+}
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    padding: 0px 0px 7px 0px;
+}
+.text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+}
+.details-link {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    justify-self: start;
+    padding: 5px 0px 0px 0px;
+}
+.details{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+}
+
+.right{
+    padding: 2px 0px 0px 0px;
+    font-size: 8px;
+}
+
+@media screen and (max-width: 440px) {
+    .Container {
+        display: inline-block;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .First {
+        display: grid;
+        grid-template-rows: 0.1fr 0.1fr 1.5fr 0.1fr;
+        background-color: #8A7EF6;
+        padding: 45px 25px 25px 25px;
+        border-radius: 5px 5px 0px 0px;
+    }
+    .Second {
+        display: grid;
+        grid-template-rows: 0.1fr 0.1fr 1.5fr 0.1fr;
+        background-color: #BB7EF7;
+        padding: 45px 25px 25px 25px;
+    }
+    .Third {
+        display: grid;
+        grid-template-rows: 0.1fr 0.1fr 1.5fr 0.1fr;
+        background-color: #EE7BB9;
+        padding: 45px 25px 25px 25px;
+        border-radius: 0px 0px 5px 5px;
+    }
+}
