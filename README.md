@@ -1,5 +1,7 @@
 # 30 days CSS Coding Challenge
 
+To run any of this examples, move to the directory 'Day#', and run Live Server in VSC.</br></br>
+
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="1604" alt="day1" src="./Day1/Day1.jpg"> <p align="center"><a href="./Day1/">Day 1</a></p>|<img width="1604" alt="day2" src="./Day2/Day2.png"> <p align="center"><a href="./Day2/">Day 2</a></p>|<img width="1604" alt="day3" src="./Day3/Day3.png"><p align="center"><a href="./Day3/">Day 3</a></p>|
