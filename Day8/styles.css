@@ -1,0 +1,174 @@
+/* what' the best convention to call selectors? */
+body {
+     display: grid;
+     height: 100vh;
+ }
+ 
+ .container {
+     margin: auto;
+     width: 75%;
+     height: 55%;
+     background-color: #3C56D4;
+     border-radius: 5px;
+     box-shadow: 0px 0px 2.5px rgb(115, 115, 115);
+ }
+ 
+ .buttons {
+     display: grid;
+     grid-template-rows: repeat(3, 1fr);
+     height: 100%;
+     gap: 15px;
+     padding: 5% 12%;
+     color: #dde3ff;
+ }
+ .choice0 {
+     display: grid;
+     grid-template-columns: 0.1fr 1fr 0.1fr;
+     align-items: center;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     border-radius: 5px;
+     background-color: #5F77EA;
+ }
+ 
+ .choice0.active {
+     display: grid;
+     grid-template-columns: 0.1fr 1fr 0.1fr;
+     align-items: center;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     border-radius: 5px;
+     background-color: #3a4fbd;
+     font-weight: bold;
+ }
+ 
+ .choice0 .fa-check {
+     font-size: large;
+     color: #f2f5ff;
+     margin: auto;
+     padding-right: 5px;
+     padding-left: 5px;
+ }
+ 
+ .choice0 .fa-x {
+     font-size: smaller;
+     margin: auto;
+     padding-left: 5px;
+     padding-right: 5px;
+ }
+ 
+ .choice1 {
+     display: grid;
+     grid-template-columns: 1.1fr 0.2fr 0.1fr;
+     align-items: center;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     padding-left: 10px;
+     border-radius: 5px;
+     background-color: #D96D7D;
+ }
+ 
+ .try-again {
+     font-size: 11px;
+     font-weight: lighter;
+ }
+ 
+ .choice1 .fa-x {
+     font-size: smaller;
+     margin: auto;
+     padding-left: 5px;
+     padding-right: 5px;
+ }
+ .choice2 {
+     display: grid;
+     grid-template-columns: 1.1fr 0.1fr;
+     align-items: center;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     padding-left: 10px;
+     border-radius: 5px;
+     background-color: #5F77EA;
+ }
+ 
+ .choice2.active {
+     display: grid;
+     grid-template-columns: 0.1fr 1fr 0.1fr;
+     align-items: center;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     border-radius: 5px;
+     background-color: #3a4fbd;
+     font-weight: bold;
+ }
+ 
+ .choice2 .fa-x {
+     font-size: smaller;
+     margin: auto;
+     padding-left: 5px;
+     padding-right: 5px;
+ }
+ 
+ @media screen and (max-width: 480px) {
+     .choice0 {
+         display: grid;
+         grid-template-columns: 0.1fr 1fr 0.1fr;
+         align-items: center;
+         border-radius: 5px;
+         background-color: #5F77EA;
+         padding-top: 5px;
+         padding-bottom: 5px;
+     }
+     .choice0 .fa-check {
+         font-size: large;
+         color: #f2f5ff;
+         margin: auto;
+         padding-right: 10px;
+         padding-left: 10px;
+     }
+     .choice0 .fa-x {
+         font-size: smaller;
+         margin: auto;
+         padding-left: 5px;
+         padding-right: 15px;
+     }
+     .choice1 {
+         display: grid;
+         grid-template-columns: 1.1fr 0.2fr 0.1fr;
+         align-items: center;
+         padding-top: 5px;
+         padding-bottom: 5px;
+         padding-left: 10px;
+         border-radius: 5px;
+         background-color: #D96D7D;
+     }
+     .try-again {
+         padding-left: 5px;
+         font-size: 11px;
+         font-weight: lighter;
+     }
+     .choice1 .fa-x {
+         font-size: smaller;
+         margin: auto;
+         padding-left: 5px;
+         padding-right: 15px;
+     }
+     .choice2 .fa-x {
+         font-size: smaller;
+         margin: auto;
+         padding-left: 5px;
+         padding-right: 15px;
+     }
+     .container {
+         margin: auto;
+         width: 75%;
+         height: 75%;
+         background-color: #3C56D4;
+         border-radius: 5px;
+         box-shadow: 0px 0px 2.5px rgb(115, 115, 115);
+     }
+     .choice span {
+         justify-content: center;
+         justify-self: center;
+         width: 50%;
+     }
+ }
