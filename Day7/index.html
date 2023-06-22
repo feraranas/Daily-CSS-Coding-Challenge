@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8c1f754ca0.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -151,8 +152,38 @@
                 </li>
             </ul>
         </div>
-        
     </div>
+    <script>
+        const menuItems = document.querySelectorAll('.menu-item');
+        menuItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                if (item.classList.contains('active')) {
+                    item.classList.remove('active');
+                } else {
+                    menuItems.forEach((item) => {
+                        item.classList.remove('active');
+                    })
+                    item.classList.add('active');
+                }
+            });
+        });
+
+
+        // Add event listener to each footer item
+        const footerItems = document.querySelectorAll('.footer-item');
+        footerItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                if (item.classList.contains('active')) {
+                    item.classList.remove('active');
+                } else {
+                    footerItems.forEach((item) => {
+                        item.classList.remove('active');
+                    })
+                    item.classList.add('active');
+                }    
+            })
+        })
+    </script>
 </body>
 
 </html>
