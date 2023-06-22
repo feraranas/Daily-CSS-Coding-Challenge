@@ -1,123 +1,210 @@
 body {
-     display: grid;
-     align-content: center;
-     justify-content: center;
-     background-color: #14171B;
-     height: 100vh;
- }
- 
- .Container {
-   display: grid;
-   grid-template-rows: 7.5% 5% 27.5% 5% 40% 5% 10%;
-   margin: auto;
-   justify-content: center;
-   max-width: 320px;
-   max-height: 800px;
-   padding-top: calc(7.5% + 5px);
-   box-shadow: 0px 0px 2.5px rgb(0, 0, 0);
-   background-color: #191D23;
-   color: #91B1D9;
- }
- 
- .Title{
-     padding-left: 15px;
-     font-size: 32.5px;
-     font-weight: bold;
- }
- 
- .Menu{
-     display: grid;
-     padding-left: 15px;
-     font-size: 15.5px;
- }
- 
- nav ul {
-     display: grid;
-     grid-template-columns: repeat(5, 1fr);
-     overflow-x: scroll;
-     width: 160%;
- }
- 
- nav ul li {
- 
- }
- 
- nav hr {
-     opacity: 0.25;
-     border: 1px solid #91B1D9;
- }
- 
- .AlbumData{
-     display: grid;
-     grid-template-rows: 10% 17.5% 68.5%;
-     padding-left: 15px;
- }
- 
- .FirstRow{
-     display: grid;
-     grid-template-columns: 0.25fr 1fr;
-     justify-content: space-between;
-     font-size: 14px;
- }
- 
- .SecondRow{
-     font-size: 17.5px;
-     font-weight: lighter;
- }
- 
- .AlbumPhoto{
-     width: 90%;
-     height: 100%;
-     border-radius: 7.5px;
-     box-shadow: 0px 0px 1px rgb(0, 0, 0);
- }
- 
- .HotSongsTitle{
-     padding-left: 15px;
- }
- 
- .HotSongs{
-     padding-left: 15px;
- }
- 
- .HotSongTag{}
- 
- .Artist{}
- 
- .Avatar{}
- 
- .Name{}
- 
- .AddFavorite{}
- 
- .MediaPlayer{
-     padding-left: 15px;
- }
- 
- .Footer{
-     display: grid;
-     padding-left: 5px;
-     padding-right: 5px;
-     box-shadow: 0px 0px 1px rgb(0, 0, 0);
- }
- 
- .Footer ul {
-     display: grid;
-     grid-template-columns: repeat(4, 1fr);
-     justify-content: center;
-     align-items: center;
- }
- 
- .Footer ul li {
-     display: grid;
-     justify-items: center;
- }
- 
- .Footer ul li i {
-     font-size: 22px;
- }
- 
- .Footer ul li span {
-     font-size: 12px;
-     font-weight: lighter;
- }
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    background-color: #14171B;
+    height: 100vh;
+}
+
+.Container {
+  display: grid;
+  grid-template-rows: 7.5% 5% 27.5% 5% 40% 5% 10%;
+  margin: auto;
+  justify-content: center;
+  max-width: 320px;
+  max-height: 800px;
+  padding-top: calc(7.5% + 5px);
+  box-shadow: 0px 0px 2.5px rgb(0, 0, 0);
+  background-color: #191D23;
+  color: #91B1D9;
+}
+
+.Title{
+    padding-left: 15px;
+    font-size: 32.5px;
+    font-weight: bold;
+}
+
+.Menu{
+    padding-left: 15px;
+    font-size: 15.5px;
+    overflow: auto;
+}
+
+nav ul {
+    display: inline-block;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 160%;
+}
+
+nav ul li {
+  display: inline-block;
+  cursor: pointer; /* Add cursor pointer to indicate clickable element */
+  margin-right: 20px;
+}
+
+nav ul li.active {
+    font-weight: bolder;
+    color: #91B1D9;
+}
+
+nav hr {
+  opacity: 0.10;
+  border: 1px solid #91B1D9;
+  width: 150%
+}
+
+.AlbumSlider {
+    
+}
+
+.AlbumData{
+    display: grid;
+    grid-template-rows: 0.1fr 0.1fr 0.2fr;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+.AlbumTitle {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+span.AlbumTag {
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: 10px;
+    border: 1px solid #E95F52;
+    border-radius: 10px;
+}
+
+.AlbumData .AlbumAuthor {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.AlbumData .AlbumPhoto {
+    grid-row: 3;
+    grid-column: 1 / 3;
+}
+
+.FirstRow{
+    display: grid;
+    grid-template-columns: 0.75fr 0.25fr;
+    font-size: 14px;
+}
+
+.SecondRow{
+    font-size: 17.5px;
+    font-weight: lighter;
+}
+
+.AlbumPhoto{
+    width: 87.5%;
+    height: 60%;
+    grid-row: 3;
+    grid-column: 1 / 3;
+    border-radius: 7.5px;
+    box-shadow: 0px 0px 1px rgb(0, 0, 0);
+}
+
+.HotSongsTitle{
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+.HotSongs{
+    display: grid;
+    grid-template-rows: auto;
+    overflow-y: auto;
+    padding-left: 15px;
+    gap: 10px;
+}
+
+
+.HotSongTag{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 20%;
+}
+
+.HotSongTag hr{
+    grid-column: 1 / -1;
+    width: 90%;
+    margin-top: 15px;
+    border-radius: 5px;
+    opacity: 0.10;
+    margin-left: 5px;
+}
+
+.Avatar{
+    grid-column: 1;
+    grid-row: 1 / 3;
+    margin: auto;
+    align-self: center;
+    width: 50px;
+    border-radius: 46px;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.Name0{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.Name1{
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.AddFavorite{
+    grid-column: 3;
+    grid-row: 1 / 3;
+    margin: auto;
+    color: #E95F52;
+}
+
+.MediaPlayer{
+    padding-left: 15px;
+}
+
+.Footer{
+    display: grid;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-shadow: 0px 0px 1px rgb(0, 0, 0);
+}
+
+.Footer ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer ul .footer-item {
+    display: grid;
+    justify-items: center;
+    cursor: pointer;
+}
+
+.Footer ul .footer-item.active {
+    display: grid;
+    justify-items: center;
+    color: #E95F52;
+}
+
+.Footer ul li i {
+    font-size: 22px;
+}
+
+.Footer ul li span {
+    font-size: 12px;
+    font-weight: lighter;
+}
