@@ -1,0 +1,345 @@
+/* Add CSS here */
+body {
+     height: 100vh;
+     position: relative;
+     margin: 0;
+ }
+ 
+ .Container {
+     position: absolute;
+     width: 80%;
+     height: 80%;
+     margin: auto;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     padding: 25px;
+     box-shadow: 0px 0px 25px #9fb9ff49;
+     border-radius: 25px;
+     display: grid;
+     grid-template-columns: 0.5fr 1fr;
+     grid-template-rows: 0.5fr 1fr 1fr 1fr;
+     align-items: center;
+ }
+ 
+ .notification-container{
+     display: grid;
+     grid-template-columns: 1fr 0.1fr 1fr;
+     grid-row: 1;
+     grid-column: 1;
+     border-radius: 50px;
+     box-shadow: 0px 0px 25px #b7c6f073;
+     width: 85%;
+     height: 70%;
+     align-items: center;
+     justify-items: center;
+     margin: auto;
+     color: #B8BDE3;
+     padding-left: 5px;
+     font-size: larger;
+ }
+ 
+ .message {
+     cursor: pointer;
+ }
+ 
+ .alerts {
+     cursor: pointer;
+ }
+ 
+ .add-container {
+     display: grid;
+     grid-row: 1;
+     grid-column: 2;
+     justify-content: end;
+ }
+ 
+ .add {
+     color: #5562B8;
+     box-shadow: 0px 0px 25px #b7c6f073;
+     border-radius: 50%;
+     width: 50px;
+     height: 50px;
+     align-items: center;
+     display: grid;
+     justify-content: center;
+ }
+ 
+ .photo {
+     display: grid;
+     grid-row: 2;
+     grid-column: 1;
+     align-items: center;
+     justify-items: center;
+     margin: auto;
+ }
+ 
+ .photo img {
+     width: 75%;
+     height: 100%;
+     border-radius: 50%;
+     border-width: 8px;
+     border-color: #f4f6fcf8;
+ }
+ 
+ .description {
+     display: grid;
+     grid-template-rows: 0.1fr 0.5fr;
+     grid-row: 2;
+     grid-column: 2;
+ }
+ 
+ .description .description-title {
+     display: grid;
+     font-size: larger;
+     color: #5562B8;
+ }
+ 
+ .description .description-body {
+     display: grid;
+     color: #454545;
+ }
+ 
+ hr {
+     grid-row: 3;
+     grid-column: 1 / -1;
+     align-self: baseline;
+ }
+ 
+ .likes {
+     display: grid;
+     grid-template-rows: 0.2fr 0.5fr;
+     grid-row: 3;
+     grid-column: 1;
+     align-items: center;
+     justify-items: center;
+     margin: auto;
+ }
+ 
+ .likes .likes-text {
+     color: #A2A2A2;
+ }
+ 
+ .likes .likes-number {
+     font-size: 150%;
+     color: #5562B8;
+ }
+ 
+ .post {
+     display: grid;
+     grid-template-rows: 0.2fr 0.5fr;
+     grid-row: 3;
+     grid-column: 2;
+     align-items: center;
+     justify-items: center;
+     margin: auto;
+ }
+ 
+ .post .post-text {
+     color: #A2A2A2;
+ }
+ 
+ .post .post-number {
+     font-size: 150%;
+     color: #5562B8;
+ }
+ 
+ .update-profile-container {
+     display: grid;
+     grid-template-rows: 0.1fr 0.5fr 1fr;
+     grid-row: 4;
+     grid-column: 1 / -1;
+     border-radius: 2.5px;
+     width: 95%;
+     height: 85%;
+     align-items: center;
+     justify-items: center;
+     margin: auto;
+     color: #B8BDE3;
+     padding: 10px 15px;
+     font-size: larger;
+     background-color: #EDF1FA;
+ }
+ 
+ .update-profile-container .x-button {
+     grid-row: 1;
+     grid-column: -1;
+     color: #BAC3CE;
+     font-size: small;
+     justify-self: end;
+     justify-items: end;
+     padding-right: 10px;
+     cursor: pointer;
+ }
+ 
+ .update-profile-container .update-profile-text {
+     grid-row: 2;
+     color: #7D8D9B;
+     font-size: 17px;
+     width: 90%;
+     padding-bottom: 20px;
+ }
+ 
+ .update-profile-container .update-profile-button {
+     border-radius: 50px;
+     grid-row: 3;
+     color: #5562B8;
+     box-shadow: 0px 0px 25px #9fb9ff49;
+     background-color: white;
+     padding-left: 5px;
+     padding-right: 5px;
+     font-size: 17px;
+     height: 80%;
+     width: 45%;
+ }
+ 
+ @media screen and (max-width: 440px) {
+     .Container {
+         position: absolute;
+         width: 80%;
+         height: 80%;
+         margin: auto;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         padding: 25px;
+         box-shadow: 0px 0px 25px #9fb9ff49;
+         border-radius: 25px;
+         display: grid;
+         grid-template-columns: 0.5fr 1fr;
+         grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr;
+         align-items: center;
+     }
+     .photo {
+         display: grid;
+         grid-row: 2;
+         grid-column: 1 / -1;
+         align-items: center;
+         justify-items: center;
+         margin: auto;
+     }
+ 
+     .photo img {
+         width: 55%;
+         height: 100%;
+         border-radius: 50%;
+         border-width: 8px;
+         border-color: #f4f6fcf8;
+     }
+ 
+     .description {
+         display: grid;
+         grid-template-rows: 0.1fr 0.5fr;
+         grid-row: 3;
+         grid-column: 1 / -1;
+     }
+ 
+     .description .description-title {
+         display: grid;
+         font-size: medium;
+         color: #5562B8;
+     }
+ 
+     .description .description-body {
+         display: grid;
+         font-size: smaller;
+         color: #454545;
+     }
+ 
+     hr {
+         grid-row: 4;
+         grid-column: 1 / -1;
+         align-self: baseline;
+     }
+ 
+     .likes {
+         display: grid;
+         grid-template-rows: 0.2fr 0.5fr;
+         grid-row: 4;
+         grid-column: 1;
+         align-items: center;
+         justify-items: center;
+         margin: auto;
+         padding-top: 10px;
+     }
+ 
+     .likes .likes-text {
+         font-size: small;
+         color: #A2A2A2;
+     }
+ 
+     .likes .likes-number {
+         font-size: 120%;
+         color: #5562B8;
+     }
+ 
+     .post {
+         display: grid;
+         grid-template-rows: 0.2fr 0.5fr;
+         grid-row: 4;
+         grid-column: 2;
+         align-items: center;
+         justify-items: center;
+         margin: auto;
+         padding-top: 10px;
+     }
+ 
+     .post .post-text {
+         font-size: small;
+         color: #A2A2A2;
+     }
+ 
+     .post .post-number {
+         font-size: 120%;
+         color: #5562B8;
+     }
+ 
+     .update-profile-container {
+         display: grid;
+         grid-template-rows: 0.1fr 0.5fr 1fr;
+         grid-row: 5;
+         grid-column: 1 / -1;
+         border-radius: 2.5px;
+         width: 95%;
+         height: 100%;
+         align-items: center;
+         justify-items: center;
+         margin: auto;
+         color: #B8BDE3;
+         padding: 5px 15px;
+         font-size: small;
+         background-color: #EDF1FA;
+     }
+ 
+     .update-profile-container .x-button {
+         grid-row: 1;
+         grid-column: -1;
+         color: #BAC3CE;
+         font-size: small;
+         justify-self: end;
+         justify-items: end;
+         padding-right: 10px;
+         cursor: pointer;
+     }
+ 
+     .update-profile-container .update-profile-text {
+         grid-row: 2;
+         color: #7D8D9B;
+         font-size: 12px;
+         width: 90%;
+         padding-bottom: 20px;
+     }
+ 
+     .update-profile-container .update-profile-button {
+         border-radius: 50px;
+         grid-row: 3;
+         color: #5562B8;
+         box-shadow: 0px 0px 25px #9fb9ff49;
+         background-color: white;
+         padding-left: 5px;
+         padding-right: 5px;
+         font-size: 12px;
+         height: 80%;
+         width: 45%;
+     }
+ }
