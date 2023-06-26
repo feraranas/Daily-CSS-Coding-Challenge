@@ -1,0 +1,26 @@
+/* Add CSS here */
+body {
+     background-color: #E4ECF2;
+ }
+ 
+ .container {
+     display: grid;
+     grid-template-rows: 0.2fr 0.7fr;
+     box-shadow: 0px 0px 20px #00000030;
+     position: relative;
+ }
+ .st {
+     text-align: center;
+ }
+ 
+ .icon {
+     color: #4795E9;
+ }
+ 
+ .input {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     width: 80%;
+     background-color: #F9FAFC;
+     text-align: center;
+ }
