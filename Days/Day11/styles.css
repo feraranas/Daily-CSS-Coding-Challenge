@@ -1,26 +1,60 @@
 /* Add CSS here */
 body {
-     background-color: #E4ECF2;
+    display: grid;
+    height: 100vh;
+    background-color: #E4ECF2;
  }
  
  .container {
-     display: grid;
-     grid-template-rows: 0.2fr 0.7fr;
-     box-shadow: 0px 0px 20px #00000030;
-     position: relative;
+    display: grid;
+    margin: auto;
+    position: relative;
+    height: 15%;
+    width: 35%;
+    grid-template-rows: 1.5fr 2fr;
+    box-shadow: 0px 0px 20px #00000030;
+    background-color: white;
  }
- .st {
-     text-align: center;
+ .select-time {
+    display: grid;
+    text-align: center;
+    align-content: center;
+    background-color: #F9FAFC;
  }
  
- .icon {
-     color: #4795E9;
+ .clock-icon {
+    position: absolute;
+    color: #4795E9;
  }
  
  .input {
      display: grid;
      grid-template-columns: 1fr 1fr 1fr;
+     justify-self: center;
      width: 80%;
-     background-color: #F9FAFC;
      text-align: center;
+ }
+
+ .input .hour {
+    width: 50%;
+    border-radius: 5px;
+    background-color: #F9FAFC;
+    border-style: solid;
+    border-color: #DEE5EA;
+ }
+
+ .input .minute {
+    width: 50%;
+    border-radius: 5px;
+    background-color: #F9FAFC;
+    border-style: solid;
+    border-color: #DEE5EA;
+ }
+
+ .input .time {
+    width: 50%;
+    border-radius: 5px;
+    background-color: #F9FAFC;
+    border-style: solid;
+    border-color: #DEE5EA;
  }
