@@ -1,0 +1,220 @@
+/* Add CSS here */
+body {
+     display: grid;
+     justify-content: center;
+     align-content: center;
+     height: 100vh;
+     background-color: #081E5D;
+ }
+ 
+ .container {
+     display: grid;
+     position: relative;
+     justify-items: center;
+     align-items: center;
+     background-color: #091534;
+     border-color: white;
+     border-width: 10px;
+     border-radius: 20px;
+     width: 500px;
+     height: 230px;
+ }
+ .get-in-touch-text {
+     position: absolute;
+     top: 30%;
+     font-size: 20px;
+     font-weight: lighter;
+     letter-spacing: 0.13em;
+     color: white;
+ }
+ .top-tab {
+     display: grid;
+     position: absolute;
+     top: 0%;
+     right: 50%;
+     transform: translate(50%, 0%);
+     background-color: white;
+     border-radius: 0px 0px 15px 15px;
+     width: 300px;
+     height: 35px;
+ }
+ 
+ .top-tab h1 {
+     justify-self: center;
+     align-self: center;
+     color: #091534;
+ }
+ 
+ .florin-pop {
+     color: #EF843A;
+ }
+ 
+ .close-button{
+     position: absolute;
+     top: 5%;
+     right: 5%;
+     transform: scale(1.5);
+     color: #9AA5CB;
+     cursor: pointer;
+ }
+ 
+ .close-button:hover{
+     position: absolute;
+     top: 5%;
+     right: 5%;
+     transform: scale(1.5);
+     color: white;
+     cursor: pointer;
+ }
+ .social-media {
+     display: grid;
+     position: absolute;
+     top: 65%;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     align-items: center;
+     gap: 10px;
+     justify-items: center;
+     color: #9AA5CB;
+     transform: scale(2.2);
+ }
+ .social-media .twitter {
+     display: grid;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     border-width: 1px;
+     border-color: #9AA5CB;
+     justify-content: center;
+     align-items: center;
+ }
+ .social-media .twitter:hover {
+     display: grid;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     border-width: 1px;
+     border-color: white;
+     color: white;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .social-media .instagram {
+     display: grid;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     border-width: 1px;
+     border-color: #9AA5CB;
+     justify-content: center;
+     align-items: center;
+ }
+ .social-media .instagram:hover {
+     display: grid;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     border-width: 1px;
+     border-color: white;
+     color: white;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .social-media .facebook {
+     display: grid;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     border-width: 1px;
+     border-color: #9AA5CB;
+     justify-content: center;
+     align-items: center;
+ }
+ .social-media .facebook:hover {
+     display: grid;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     border-width: 1px;
+     border-color: white;
+     color: white;
+     justify-content: center;
+     align-items: center;
+ }
+ .social-media .linkedin {
+     display: grid;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     border-width: 1px;
+     border-color: #9AA5CB;
+     justify-content: center;
+     align-items: center;
+ }
+ .social-media .linkedin:hover {
+     display: grid;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     border-width: 1px;
+     border-color: white;
+     color: white;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .get-in-touch-button {
+     position: absolute;
+     display: grid;
+     bottom: -30%;
+     right: 0%;
+     width: 120px;
+     height: 34px;
+     font-size: 14px;
+     font-weight: bold;
+     align-items: center;
+     justify-content: center;
+     border-radius: 50px;
+     background-color: white;
+ }
+ 
+ .toggle-button {
+   position: absolute;
+   bottom: -30%;
+   left: 0%;
+   width: 60px;
+   height: 34px;
+ }
+ 
+ .toggle-button input[type="checkbox"] {
+   display: none;
+ }
+ 
+ .slider {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #091534;
+   border-radius: 34px;
+   transition: transform 0.4s ease;
+ }
+ 
+ .slider:before {
+   position: absolute;
+   content: "";
+   height: 26px;
+   width: 26px;
+   left: 4px;
+   bottom: 4px;
+   background-color: white;
+   border-radius: 50%;
+   transition: transform 0.4s ease;
+ }
+ 
+ .toggle-button input:checked + .slider:before {
+   transform: translateX(26px);
+ }
+ 

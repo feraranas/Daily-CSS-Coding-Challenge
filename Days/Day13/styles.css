@@ -1,0 +1,168 @@
+/* Add CSS here */
+body {
+     display: grid;
+     justify-content: center;
+     align-content: center;
+     height: 100vh;
+     background-color: #ffffff;
+ }
+ .container {
+     display: grid;
+     grid-template-rows: 0.8fr 3.5fr 6fr;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     width: 1200px;
+     height: 700px;
+     box-shadow: 0px 0px 10px rgb(219, 219, 219);
+ }
+ .main-row {
+     grid-row: 1 / 3;
+     grid-column: 1 / -1;
+     display: grid;
+     grid-template-columns: 1fr 5fr;
+     justify-content: space-between;
+     background-color: #F3F4F6;
+     padding: 10px;
+     color: #a2a2a3;
+ }
+ .main-row .logo {
+     background-color: #EBEDF1;
+     width: 75px;
+     height: 30px;
+     text-align: center;
+     place-items: center;
+ }
+ .main-row .add-tab {
+     width: 35px;
+     height: 40px;
+     margin: -10px;
+     justify-self: center;
+     border-radius: 0px 0px 12px 12px;
+     background-color: #262E4A;
+     color: white;
+ }
+ .add-tab .fa-plus {
+     margin-top: 10px;
+ }
+ .main-row .profile-data {
+     display: grid;
+     grid-template-columns: repeat(3, 0.6fr);
+     grid-row: 1;
+     grid-column: -1;
+     font-size: 15px;
+     text-align: center;
+ }
+ .main-row .profile-data span {
+     white-space: nowrap;
+ }
+ .user-container {
+     background-color: #D0D4E1;
+     border-radius: 35%;
+     width: 35px;
+     height: 30px;
+     color: white;
+     justify-self: center;
+ }
+ 
+ .topic-description {
+     display: grid;
+     grid-template-rows: 1fr 5fr;
+     grid-row: 2/4;
+     grid-column: 1/-1;
+     padding: 20px 20px 5px 20px;
+ }
+ .header {
+      display: grid;
+      grid-template-columns: 1fr 8fr;
+      grid-template-rows: 1fr 2fr;
+      align-self: center;
+  }
+ .topic-photo {
+      grid-row: 1 / -1;
+      width: 55px;
+      height: 55px;
+      justify-self: center;
+      border-radius: 25%;
+  }
+ .topic-first-row {
+      grid-row: 1;
+      display: grid;
+      width: 25%;
+      white-space: nowrap;
+      gap: 15px;
+      color: #a2a2a3;
+  }
+ .dots-icon {
+     grid-column: 1;
+     align-self: center;
+ }
+ .topic-boards {
+     grid-column: 2;
+ }
+  .topic-tasks {
+      grid-column: 3;
+  }
+ .topic-title {
+     grid-row: 2;
+     color: #262E4A;
+     font-weight: bolder;
+ }
+ .columns {
+     grid-row: 2;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 0.8fr;
+     gap: 10px;
+ }
+ .column{
+     display: grid;
+     grid-template-rows: 1fr 10fr;
+     gap: 2px;
+     box-shadow: 0px 0px 20px rgb(0,0,0,0.1);
+     border-radius: 5px;
+ }
+ .column-header{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     color: white;
+     border-radius: 5px 5px 0px 0px;
+     padding: 10px;
+     align-content: center;
+ }
+ .todo {
+     background-color: #B4B6BF;
+ }
+ .inpro {
+     background-color: #6495C0;
+ }
+ .done {
+     background-color: #71B589;
+ }
+ .column-header-title{
+     white-space: nowrap;
+     font-size: 12px;
+     grid-column: 1;
+ }
+ .dots-icon-column{
+     grid-column: 2;
+ }
+ .column-body{
+     background-color: white;
+     font-size: 12px;
+     padding: 10px;
+ }
+ .column-body-container {
+     margin-bottom: 25px;
+ }
+ .column-body-title {
+     font-weight: bold;
+ }
+ .column-body-body{
+     font-size: 10px;
+ }
+ .add-column{
+     background-color: white;
+     place-content: center;
+     color: #a2a2a3;
+     padding: 20px;
+     height: 100px;
+     border-radius: 5px;
+ }
