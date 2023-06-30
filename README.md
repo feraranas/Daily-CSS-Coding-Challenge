@@ -1,4 +1,4 @@
-s 30 days CSS Coding Challenge
+30 day CSS Coding Challenge
 
 To run any of this examples, move to the directory 'Day#', and run Live Server in VSC.</br></br>
 
