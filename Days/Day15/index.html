@@ -1,0 +1,176 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Add CSS here */
+        body {
+        display: grid;
+        grid-template-rows: 2fr 7fr;
+        justify-items: center;
+        gap: 50px;
+        }
+        .labels {
+        display: grid;
+        justify-items: center;
+        background-color: #E4E8FA;
+        width: 100%;
+        }
+        .avatar-squared{
+        display: grid;
+        grid-template-columns: 1fr 0.4fr 1fr;
+        align-self: center;
+        justify-items: center;
+        align-items: center;
+        height: 70%;
+        width: 400px;
+        background-color: #FFFFFF;
+        border-radius: 50px;
+        padding: 5px 20px;
+        }
+        .christine{
+        display: grid;
+        align-items: center;
+        font-size: 12px;
+        font-weight: bold;
+        gap: 5px;
+        grid-template-columns: 1fr 1fr;
+        cursor: pointer;
+        }
+        .jordan{
+        cursor: pointer;
+        display: grid;
+        align-items: center;
+        font-size: 12px;
+        font-weight: bold;
+        gap: 5px;
+        grid-template-columns: 1fr 1fr;
+        }
+        .avatar1{
+        border-color: #B9C5FA;
+        width: 100%;
+        height: 100%;
+        border-width: 3px;
+        border-radius: 50%;
+        }
+        .avatar2{
+        border-color: #E7ADB7;
+        width: 100%;
+        height: 100%;
+        border-width: 3px;
+        border-radius: 50%;
+        }
+        
+        .chart {
+        height: 100%;
+        width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- FIRST ROW -->
+    <div class="labels">
+        <div class="avatar-squared">
+            <!-- 1. FIRST USER -->
+            <div id="Christine" class="christine">
+                <img src="https://i.pravatar.cc/75?img=3" class="avatar1"/>
+                <span>Christine</span>
+            </div>
+            
+            <!-- 2. vs -->
+            <span style="font-size: 10px">vs</span>
+
+            <!-- 3. SECOND USER -->
+            <div id="Jordan" class="jordan">
+                <img src="https://i.pravatar.cc/75?img=4" class="avatar2"/>
+                <span>Jordan</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECOND ROW-->
+    <div class="chart"><canvas id="myChart"></canvas></div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const christine = document.getElementById('Christine');
+        const jordan = document.getElementById('Jordan');
+    
+        const data = {
+            labels: [
+                'Pushing',
+                'Supporting',
+                'Versatility',
+                'Farming',
+                'Emotionless',
+                'Fighting',
+            ],
+            datasets: [
+                {
+                    label: 'Christine',
+                    data: [65, 59, 90, 81, 56, 55],
+                    fill: true,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgb(54, 162, 235)',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(255, 99, 132)',
+                    
+                },
+                {
+                    label: 'Jordan',
+                    data: [28, 48, 40, 19, 96, 27],
+                    fill: true,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(54, 162, 235)',
+                    
+                }
+            ]
+        };
+    
+        const myChart = new Chart(
+            document.getElementById('myChart'), 
+            {
+                type: 'radar',
+                data: data,
+                options: {
+                    elements: {
+                        line: {
+                            borderWidth: false
+                        },
+                        point: {
+                            borderWidth: false
+                        }
+                    }
+                },
+            }
+        );
+    
+        christine.addEventListener('click', function () {
+            // Show Christine's data (index 0) and hide Jordan's data (index 1)
+            if (myChart.data.datasets[0].hidden) {
+                myChart.data.datasets[0].hidden = false;
+            } else {
+                myChart.data.datasets[0].hidden = true;
+            }
+            myChart.update();
+        });
+    
+        jordan.addEventListener('click', function () {
+            // Show Jordan's data (index 1) and hide Christine's data (index 0)
+            if (myChart.data.datasets[1].hidden) {
+                myChart.data.datasets[1].hidden = false;
+            } else {
+                myChart.data.datasets[1].hidden = true;
+            }
+            myChart.update();
+        });
+    </script>
+</body>
+</html>
