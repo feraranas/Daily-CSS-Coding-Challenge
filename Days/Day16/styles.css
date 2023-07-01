@@ -87,7 +87,7 @@ body {
      background-color: rgba(0,0,0,0.5); /* semi-transparent background */
      z-index: 1; /* .modal is on top of other elements */
  }
- 
+
  .modal-content{
      display: grid;
      background-color: #baeecd;
@@ -134,6 +134,6 @@ body {
      color: #5790ED;
      cursor: pointer;
  }
- .text-four:hover{ 
+ .text-four:hover{
      color: black
  }

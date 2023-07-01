@@ -14,7 +14,7 @@ REACT & STYLED COMPONENTS
 Javascript
      : What is Javascript : https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript
      : What are Browser Developer Tools : https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console
-     
+
 
 DYNAMIC PROGRAMMING
      : Dynamic Programming : https://www.youtube.com/watch?v=oBt53YbR9Kk
@@ -31,6 +31,3 @@ THREE.JS
 
 Chart.js
      : https://www.chartjs.org/docs/latest/getting-started/usage.html
-
-
-
