@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8c1f754ca0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <i class="fa-solid fa-x"></i>
+
+        <h1>Send install link to mobile device</h1>
+
+        <span class="text-one">Send via SMS or visit the private URL on the mobile device to install this app directly to the device</span>
+
+        <form id="mobileData">
+            <!-- FORM CONTENT -->
+            <select name="mobileCountry">
+                <option>🇿🇦</option>
+                <option>🇻🇦</option>
+                <option>🇳🇪</option>
+                <option>🇨🇳</option>
+                <option>🇬🇫</option>
+                <option>🇬🇬</option>
+            </select>
+            <input id="mobileInput" name="mobileNumber" type="text" placeholder="Enter mobile number" class="mobile-number">
+
+            <!-- MODAL -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    Link sent succesfully.
+                </div>
+            </div>
+            <input id="sendButton" type="submit" value="Send">
+        </form>
+
+        <span class="text-two">SHARE LINK</span>
+        <span class="text-three">http://www.staggeringbeauty.com/</span>
+        <span id="copyButton" class="text-four">Copy</span>
+    </div>
+    
+    <script>
+     const send = document.querySelector('#mobileData');
+     const mNumber = document.querySelector('#mobileInput');
+     const textToCopy = document.querySelector('.text-three');
+     const close = document.querySelector('.close');
+     const copyButton = document.getElementById('copyButton');
+     const modal = document.getElementById('modal');
+
+     /* STOP ERROR NO-MOBILE-NUMBER TRANSITION */
+     mNumber.addEventListener('transitionend', (e) => {
+     if (e.propertyName !== 'transform') return;
+     mNumber.classList.remove('mobile-empty-effect')
+     })
+
+     /* FORM SUBMISSION */
+     send.addEventListener('submit', (e) => {
+     e.preventDefault();
+
+     const form = new FormData(send);
+     const values = Object.fromEntries(form.entries());
+     if (values.mobileNumber === '') {
+          mNumber.classList.add('mobile-empty')
+          mNumber.classList.add('mobile-empty-effect')
+          return;
+     } else {
+          mNumber.classList.remove('mobile-empty')
+          mNumber.classList.remove('mobile-empty-effect')
+          mNumber.value = ''
+          modal.style.display = 'block';
+     }
+     })
+
+     /* Close modal when (x) is clicked */
+     close.addEventListener('click', () => {
+     modal.style.display = 'none';
+     })
+
+     /* Close modal when outside of it is clicked */
+     window.addEventListener('click', (e) => {
+     if (e.target === modal) {
+          modal.style.display = 'none';
+     }
+     })
+
+     /* COPY BUTTON WORKING */
+     copyButton.addEventListener('click', () => {
+     const text = textToCopy.textContent;
+
+     const textarea = document.createElement('textarea');
+     textarea.value = text;
+
+     // Make the textarea invisible and append it to the document
+     textarea.style.position = 'fixed';
+     textarea.style.top = 0;
+     textarea.style.left = 0;
+     textarea.style.width = '1px';
+     textarea.style.height = '1px';
+     textarea.style.opacity = 0;
+     document.body.appendChild(textarea);
+
+     // Copy the text from the textarea
+     textarea.select();
+     document.execCommand('copy');
+
+     // Remove the textarea from the document
+     document.body.removeChild(textarea);
+
+     // Optionally, display a message indicating the text was copied
+     alert('Copied to clipboard: ' + text);
+     });
+    </script>
+</body>
+</html>
