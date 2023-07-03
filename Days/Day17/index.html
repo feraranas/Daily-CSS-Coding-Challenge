@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8c1f754ca0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <!-- BLUR COLOR EFFECT -->
+    <div class="persons-container-color-effect"></div>
+
+    <!-- INDIVIDUAL CONTAINERS -->
+    <div class="persons-container">
+        
+        <!-- PERSON 1 -->
+        <div class="person-container">
+            <div class="person-number">1</div>
+            <div class="person-options">&hellip;</div>
+            <img class="person-photo" src="https://picsum.photos/270/200">
+            <div class="person-isActive"></div>
+            <span class="person-name">Estelle Warner</span>
+            <span class="person-career">Art Director</span>
+            <button class="person-toggle">Close</button>
+        </div>
+
+        <!-- PERSON 2 -->
+        <div class="person-container">
+            <div class="person-number">2</div>
+            <div class="person-options">&hellip;</div>
+            <img class="person-photo" src="https://picsum.photos/270/200">
+            <div class="person-isActive"></div>
+            <span class="person-name">Estelle Warner</span>
+            <span class="person-career">Art Director</span>
+            <button class="person-toggle">Close</button>
+        </div>
+
+        <!-- PERSON 3 -->
+        <div class="person-container">
+            <div class="person-number">3</div>
+            <div class="person-options">&hellip;</div>
+            <img class="person-photo" src="https://picsum.photos/270/200">
+            <div class="person-isActive"></div>
+            <span class="person-name">Estelle Warner</span>
+            <span class="person-career">Art Director</span>
+            <button class="person-toggle">Close</button>
+        </div>
+    </div>
+
+    <!-- BIG MESSAGE CONTAINER-->
+    <div class="message-container">
+
+        <!-- BIG CONTAINER FIRST ROW -->
+        <div class="message-close">&times;</div>
+        <div class="message-person">Estelle Warner</div>
+
+        <!-- BIG CONTAINER SECOND ROW -->
+        <!-- MESSAGE BODY-->
+        <div class="messages-body">
+            <!-- SECOND BLUR COLOR EFFECT -->
+            <div class="message-container-color-effect"></div>
+            
+            <!-- 1. MESSAGES HISTORY -->
+            <div class="messages-body-history">
+
+                <!-- YOUR MESSAGES -->
+                <div id="me-messages">
+                    <div id="me-time">
+                        <span style="font-weight: bold;">You</span>
+                        <span>13:32</span>
+                    </div>
+                    <div id="me-message">Hey!</div>
+                    <div id="me-message">Okay, let me know!</div>
+                </div>
+
+                <!-- MESSAGE NOTIFICATION -->
+                <div id="message-notification">2 new messages</div>
+
+                <!-- FRIEND MESSAGES -->
+                <div id="friend-messages">
+                    <div id="friend-time">
+                        <img src="https://picsum.photos/270/200">
+                        <span style="font-weight: bold;">Estelle Warner</span> 14:04
+                    </div>
+                    <div id="friend-message">Hey!</div>
+                    <div id="friend-message">Ready in 5?</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BIG CONTAINER THIRD ROW -->
+        <!-- 2. TYPE YOUR MESSAGE -->
+        <input id="message-text" type="text" placeholder="Type your message here">
+
+        <!-- BIG CONTAINER FOURTH ROW -->
+        <div class="message-options">
+            <div class="message-option-icons">
+                <i class="fa-solid fa-image"></i>
+                <i class="fa-solid fa-camera"></i>
+                <i class="fa-solid fa-microphone"></i>
+            </div>
+            <button class="message-send">Send</button>
+        </div>
+</body>
+
+</html>

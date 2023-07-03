@@ -1,0 +1,234 @@
+/* ///////////////////////////////////// */
+/*  ///////////// BODY  ///////////// */
+/* ///////////////////////////////////// */
+body {
+     display: grid;
+     grid-template-columns: 0.5fr 1fr 3fr 0.5fr;
+     grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+     gap: 5px;
+     height: 100vh;
+     background-color: #F0F2F6;
+ }
+ 
+ /* ///////////////////////////////////// */
+ /* BIG Y-CONTAINER FOR PERSON-CONTAINERS */
+ /* ///////////////////////////////////// */
+ .persons-container {
+     grid-column: 2;
+     grid-row: 2 / 4;
+     display: grid;
+     gap: 15px;
+     overflow-y: scroll;
+ }
+ .persons-container-color-effect {
+     background-image: linear-gradient(to top, rgb(255, 255, 255), rgb(255, 255, 255, 0),rgb(255, 255, 255, 0),rgb(255, 255, 255, 0));
+     grid-column: 2;
+     grid-row: 2 / 4;
+     z-index: 1;
+     pointer-events: none; /* The parent container is transparent to pointer events */
+ }
+ 
+ /* ///////////////////////////////// */
+ /* INDIVIDUAL PERSON-CONTAINER STYLE */
+ /* ///////////////////////////////// */
+ .person-container {
+     grid-template-columns: 1fr 5fr 1fr 1fr 2fr;
+     position: relative;
+     padding: 10px;
+     text-align: center;
+     background-color: white;
+     color: black;
+     border-radius: 5px;
+     box-shadow: 0px 0px 2.5px rgba(0,0,0,0.1);
+     /* Set the pointer-events property to auto to enable pointer events on child elements */
+     pointer-events: auto;
+ }
+ .person-number {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 25px;
+     height: 25px;
+     background-color: #E492B7;
+     color: white;
+     border-radius: 5px 0px 5px 0px;
+     text-align: center;
+ }
+ .person-options {
+     grid-row: 1;
+ }
+ .person-photo {
+     grid-row: 2;
+     border-radius: 5px;
+ }
+ .person-isActive {
+     grid-row: 3;
+     background-color: #92D148;
+     border-radius: 50%;
+ }
+ .person-name {
+     grid-row: 3;
+     font-weight: bold;
+     font-size: 15px;
+ }
+ .person-career {
+     grid-row: 4;
+     font-size: 11px;
+ }
+ .person-toggle {
+     border-radius: 15px;
+     color: #9DC3FA;
+     background-color: white;
+     border-color: #9DC3FA;
+     border-width: 1px;
+     width: 65%;
+     font-weight: bold;
+ }
+ 
+ /* ///////////////////////////////// */
+ /* BIG MESSAGE CONTAINER */
+ /* ///////////////////////////////// */
+ .message-container {
+     grid-column: 3;
+     grid-row: 2 / 4;
+     position: relative;
+     display: grid;
+     grid-template-rows: 1fr 8fr 2fr 1fr;
+     background-color: white;
+     border-radius: 5px;
+     box-shadow: 0px 0px 2.5px rgba(0,0,0,0.05);
+     padding: 10px 15px 10px 15px;
+ }
+ .message-container-color-effect {
+     background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255, 0),rgb(255, 255, 255, 0),rgb(255, 255, 255, 0));
+     z-index: 1;
+     pointer-events: none; /* The parent container is transparent to pointer events */
+ }
+ .message-close {
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 35px;
+     height: 35px;
+     text-align: center;
+     padding-top: 2.5px;
+     background-color: #BDC0CA;
+     color: white;
+     border-radius: 0px 5px 0px 5px;
+     cursor: pointer;
+ }
+ .message-person {
+     grid-row: 1;
+ }
+ /* ///////////////////////////////// */
+ /* MESSAGE BODY */
+ /* ///////////////////////////////// */
+ .messages-body {
+     grid-row: 2;
+     display: grid;
+ }
+ 
+ /* ///////////////////////////////// */
+ /* ///////// INNER MESSAGE BODY //// */
+ /* ///////////////////////////////// */
+ .messages-body-history{
+     grid-row: 1;
+     display: grid;
+     gap: 5px;
+     grid-template-rows: 2fr 0.5fr 2fr;
+     overflow-y: scroll;
+ }
+ /* ///// ME MESSAGES //// */
+ #me-messages {
+     display: grid;
+     gap: 5px;
+     justify-self: right;
+ }
+ #me-time {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+ }
+ #me-message {
+     background-color: #5790ED;
+     padding: 5px;
+     color: white;
+     border-radius: 2px;
+ }
+ 
+ 
+ /* ///// MESSAGE NOTIFICATION //// */
+ #message-notification {
+     background-color: #E492B7;
+     border-radius: 25px;
+     font-size: 10px;
+     color: white;
+     margin: auto;
+     padding: 5px;
+     font-weight: bold;
+ }
+ 
+ /* ///// FRIEND MESSAGES //// */
+ #friend-messages {
+     display: grid;
+     gap: 5px;
+     justify-self: left;
+ }
+ #friend-time {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+ }
+ #friend-time > img {
+     width: 30px;
+     height: 30px;
+     border-radius: 5px;
+ }
+ #friend-message {
+     background-color: #E6ECF3;
+     padding: 5px;
+     color: #737A8E;
+     border-radius: 2px;
+ }
+ 
+ /* 2. TYPE YOUR MESSAGE */
+ #message-text {
+     grid-row: 3;
+     width: 100%;
+     background-color: #FAFCFF;
+     padding: 2.5px 10px 2.5px 2.5px;
+ }
+ 
+ 
+ 
+ 
+ .message-options {
+     grid-row: 4;
+     display: grid;
+     grid-template-columns: 1fr 4fr;
+ }
+ .message-option-icons {
+     grid-column: 1;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     gap: 10px;
+     height: 80%;
+     margin: auto;
+     align-items: center;
+     cursor: pointer;
+ }
+ .message-send{
+     grid-column: 2;
+     height: 75%;
+     min-width: 60px;
+     align-self: center;
+     justify-self: end;
+     background-color: #5C8EDC;
+     border-radius: 25px;
+     color: white;
+ }
+ 
+ /* ///////////////////////////////// */
+ /* //////// RESPONSIVENESS ///////// */
+ /* ///////////////////////////////// */
+ @media screen and (max-width: 600px) {
+     
+ }
