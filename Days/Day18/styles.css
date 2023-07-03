@@ -6,7 +6,7 @@ body {
      background-color: #F8F4FD;
      font-family: 'Poppins', sans-serif;
  }
- 
+
  /* ////////////////// */
  /* BACKGROUND CIRCLES */
  /* ////////////////// */
@@ -32,7 +32,7 @@ body {
      background-color: rgba(241, 228, 247, 0.75);
      z-index: 0;
  }
- 
+
  /* ///////////////////// */
  /* POSITIVE ANNOUNCEMENT */
  /* ///////////////////// */
@@ -103,7 +103,7 @@ body {
      grid-row: 2;
      font-size: 12px;
  }
- 
+
  /* ///////////////////// */
  /* NEGATIVE ANNOUNCEMENT */
  /* ///////////////////// */
