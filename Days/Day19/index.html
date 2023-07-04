@@ -1,0 +1,201 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header"></div>
+        <div class="body">
+            <img alt="pizza-hut-logo" src="https://drive.google.com/uc?export=view&id=1KLglF6g9YHf_IeRHA7mwO_3yccadkaYX">
+
+            <!-- FIRST ROW -->
+            <div class="title">Your order from <span style="font-weight: bold;">Pizza Hut</span></div>
+
+            <!-- SECOND ROW -->
+            <!-- BEVERAGES ARRAY -->
+            <div class="beverages">
+            
+                <!-- INDIVIDUAL BEVERAGE -->
+                <div data-key="1" class="beverage">
+                    <!-- BEVERAGE NAME -->
+                    <div id="beverage-name" data-key="1">British Pizza | Medium</div>
+                
+                    <!-- BEVERAGE QUANTITY ORDER -->
+                    <div id="quantity">
+                        <button id="less-q" data-key="1">&minus;</button>
+                        <input id="num-q" name="num-q" type="number" data-key="1" value="1" disabled>
+                        <button id="add-q" data-key="1">&plus;</button>
+                    </div>
+                
+                    <!-- BEVERAGE PRICE -->
+                    <span id="beverage-price" data-key="1"></span>
+                    <!-- BEVERAGE DELETE BUTTON -->
+                    <span id="beverage-delete" data-key="1">&times;</span>
+                </div>
+                
+                <!-- INDIVIDUAL BEVERAGE -->
+                <div data-key="2" class="beverage">
+                
+                    <!-- BEVERAGE NAME -->
+                    <div id="beverage-name" data-key="2">Pizza Diavola | Medium</div>
+                
+                    <!-- BEVERAGE QUANTITY ORDER -->
+                    <div id="quantity">
+                        <button id="less-q" data-key="2">&minus;</button>
+                        <input id="num-q" name="num-q" type="number" data-key="2" value="1" disabled>
+                        <button id="add-q" data-key="2">&plus;</button>
+                    </div>
+                
+                    <!-- BEVERAGE PRICE -->
+                    <span id="beverage-price" data-key="2"></span>
+                    <!-- BEVERAGE DELETE BUTTON -->
+                    <span id="beverage-delete" data-key="2">&times;</span>
+                </div>
+            </div>
+            
+            <!-- THIRD ROW -->
+            <button id="add-beverage"><span class="icecream">&#x1F368</span> Add a beverage</button>
+
+            <!-- FOURTH ROW -->
+            <div id="order">
+                
+                <span class="order-rc-11">Subtotal</span>
+                <span id="subtotal-price" class="order-rc-12">&dollar;15,98</span>
+
+                <span class="order-rc-21">Shipping</span>
+                <span id="shipping-price" class="order-rc-22">&dollar;2</span>
+
+                <span class="order-rc-31">Total (TVA incl.)</span>
+                <span id="total-price" class="order-rc-32">&dollar;17,98</span>
+            </div>
+
+            <!-- FIFTH ROW -->
+            <button id="checkout">Checkout</button>
+        </div>
+    </div>
+    <script>
+     const beverages = [
+          {
+               "id": 1,
+               "name": "British Pizza",
+               "sizes": ["Small", "Medium", "Large"],
+               "price": 7.99
+          },
+          {
+               "id": 2,
+               "name": "Pizza Diavola",
+               "sizes": ["Small", "Medium", "Large"],
+               "price": 8.99
+          },
+          {
+               "id": 3,
+               "name": "Margarita Pizza",
+               "sizes": ["Small", "Medium", "Large", "Extra Large"],
+               "price": 10.99
+          },
+          {
+               "id": 4,
+               "name": "Special Big Pizza",
+               "sizes": ["Small", "Medium", "Large", "Extra Large"],
+               "price": 12.99
+          }
+     ]
+
+     updateTotal = () => {
+          const prices = document.querySelectorAll('#beverage-price')
+          const subtotal = document.querySelector('#subtotal-price')
+          const shipping = document.querySelector('#shipping-price')
+          const total = document.querySelector('#total-price')
+          
+          let sum = 0
+          prices.forEach(price => 
+               sum += parseFloat(price.firstChild.data.substring(1))
+          )
+          let roundedNumber = Number(sum.toFixed(2))
+          if (roundedNumber !== null) {
+               subtotal.innerHTML = "&dollar;"+`${roundedNumber}`
+          }
+          if (parseFloat(subtotal.innerHTML.substring(1)) === 0) {
+               total.innerHTML = 'Select 1 or more pizza'
+          } else {
+               let s = parseFloat(shipping.firstChild.data.substring(1))
+               let t = Number((roundedNumber+s).toFixed(2))
+               total.innerHTML = "&dollar;"+`${t}`
+          }
+     }
+
+     updatePrice = (e = 1, key) => {
+          const p = document.querySelector(`#beverage-price[data-key="${key}"]`)
+          let pizzaPrice = e * parseFloat(beverages[key - 1].price)
+          let roundedNumber = Number(pizzaPrice.toFixed(2))
+          
+          if (roundedNumber !== null) {
+               if (p !== null) {
+                    p.innerHTML = "&dollar;"+`${roundedNumber}`
+               } else if (p.innerHTML === null) {
+                    throw new Error("Not defined")
+               }
+          }
+          updateTotal()
+     }
+
+     addEventHandler = (e) => {
+          let pizzaKey = e.srcElement.dataset.key
+          const q = document.querySelector(`#num-q[data-key="${pizzaKey}"]`)
+          if (q.value >= 999) {
+               return
+          }
+          q.value++
+          updatePrice(q.value, pizzaKey)
+     }
+
+     removeEventHandler = (e) => {
+          let pizzaKey = e.srcElement.dataset.key
+          const q = document.querySelector(`#num-q[data-key="${pizzaKey}"]`)
+          if (q.value <= 0) {
+               return
+          }
+          q.value--
+          updatePrice(q.value, pizzaKey)
+     }
+
+     // Remove & Add Pizza functionality
+     const removePizzas = document.querySelectorAll('#less-q')
+     const addPizzas = document.querySelectorAll('#add-q')
+     addPizzas.forEach(pizza => pizza.addEventListener('click', addEventHandler))
+     removePizzas.forEach(pizza => pizza.addEventListener('click', removeEventHandler))
+    
+     // Render initial pizza totals
+     beverages.forEach(beverage => {
+          const price = document.querySelector(`#beverage-price[data-key="${beverage.id}"]`)
+          if (price !== null) {
+               price.innerHTML = "&dollar;"+`${beverage.price}`
+          } else if (price === null) {
+               throw new Error("Catched error. Chill")
+          }
+     })
+    </script>
+</body>
+
+</html>
+
+
+<!-- 
+
+    Minus sign (-):
+    HTML entity code: &minus;
+    Unicode code point: U+2212
+
+    Plus sign (+):
+    HTML entity code: &plus;
+    Unicode code point: U+002B
+
+  <p>Minus sign: &#x2212; or &minus;</p>
+  <p>Plus sign: &#x002B; or &plus;</p>
+
+-->
