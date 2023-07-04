@@ -1,0 +1,185 @@
+/* Add CSS here */
+body {
+     display: grid;
+     justify-content: center;
+     align-content: center;
+     height: 100vh;
+     background-color: #F4BC77;
+ }
+ .container {
+     display: grid;
+     grid-template-rows: 1.25fr 5fr;
+     position: relative;
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+     width: 400px;
+     height: 550px;
+     border-radius: 15px;
+ }
+ .header{
+     position: inherit;
+     grid-row: 1;
+     background-color: #ED7254;
+     border-radius: 15px 15px 0px 0px;
+ }
+ .body{
+     background-color: white;
+     grid-row: 2;
+     position: inherit;
+     display: grid;
+     grid-template-rows: 0.45fr 0.5fr 0.25fr 0.6fr 0.18fr;
+     border-radius: 0px 0px 15px 15px;
+     padding: 15px;
+     gap: 5px;
+ }
+ 
+ /* ///////////////////////////// */
+ /* PIZZA HUT LOGO IMAGE */
+ /* ///////////////////////////// */
+ img {
+     position: absolute;
+     top: -12.5%;
+     left: 37%;
+     width: 100px;
+     height: 100px;
+     background-color: white;
+     border-color: white;
+     border-width: 5px;
+     border-radius: 50%;
+ }
+ 
+ /* ///////////////////////////// */
+ /* FIRST ROW -> TITLE PIZZA HUT */
+ /* ///////////////////////////// */
+ .title {
+     grid-row: 1;
+     width: 40%;
+     padding-top: 35px;
+     text-align: center;
+     justify-self: center;
+ }
+ 
+ 
+ /* ///////////////////////////// */
+ /* SECOND ROW -> BEVERAGES ARRAY */
+ /* ///////////////////////////// */
+ .beverages {
+     grid-row: 2;
+     display: grid;
+     font-size: 13px;
+     gap: 5px;
+     padding: 0px 0px 0px 7.5px;
+ }
+ .beverage {
+     display: grid;
+     grid-template-rows: auto;
+     grid-template-columns: 2fr 1.2fr 0.5fr 0.7fr;
+     gap: 10px;
+     vertical-align: center;
+ }
+ #beverage-name {
+     grid-column: 1;
+ }
+ #quantity {
+     grid-column: 2;
+     text-align: center;
+ }
+ #less-q {
+     background-color: #f4f4f693;
+     width: 25px;
+     height: 15px;
+     
+ }
+ #num-q {
+     width: 30px;
+ }
+ #add-q {
+     background-color: #f4f4f693;
+     width: 25px;
+     height: 15px;
+     
+ }
+ #beverage-price {
+     grid-column: 3;
+ 
+ }
+ #beverage-delete {
+     grid-column: 4;
+     width: 20px;
+     height: 20px;
+     text-align: center;
+     background-color: #F4F4F6;
+     color: rgba(0,0,0,0.55);
+     border-radius: 50%;
+     cursor: pointer;
+ }
+ 
+ /* ///////////////////////////// */
+ /* THIRD ROW -> ADD BEVERAGE BUTTON */
+ /* ///////////////////////////// */
+ #add-beverage {
+     grid-row: 3;
+     width: 45%;
+     background-color: white;
+     border-width: 1px;
+     border-color: rgba(0, 0, 0, 0.25);
+     border-radius: 5px;
+     font-size: 13.5px;
+     height: 40px;
+     vertical-align: center;
+ }
+ 
+ /* ///////////////////////////// */
+ /* FOURTH ROW -> ORDER CHECKOUT */
+ /* ///////////////////////////// */
+ #order {
+     grid-row: 4;
+     display: grid;
+     grid-template-columns: 0.5fr 0.5fr;
+     grid-template-rows: 0.5fr 0.5fr 0.5fr;
+     background-color: #F4F4F6;
+     border-radius: 5px;
+     padding: 10px 17.5px 10px 15px;
+     font-size: 13.5px;
+     align-items: center;
+ }
+ .order-rc-11 {
+     grid-row: 1;
+     grid-column: 1;
+ }
+ 
+ .order-rc-12 {
+     grid-row: 1;
+     grid-column: 2;
+     text-align: end;
+ }
+ 
+ .order-rc-21 {
+     grid-row: 2;
+     grid-column: 1;
+ }
+ .order-rc-22 {
+     grid-row: 2;
+     grid-column: 2;
+     text-align: end;
+ }
+ .order-rc-31 {
+     grid-row: 3;
+     grid-column: 1;
+ }
+ .order-rc-32 {
+     grid-row: 3;
+     grid-column: 2;
+     text-align: end;
+ }
+ 
+ 
+ 
+ /* ///////////////////////////// */
+ /* FIFTH ROW -> CHECKOUT BUTTON */
+ /* ///////////////////////////// */
+ #checkout {
+     grid-row: 5;
+     background-color: #ED7254;
+     color: white;
+     border-radius: 5px;
+ }
