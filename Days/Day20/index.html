@@ -1,0 +1,157 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8c1f754ca0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="logo">&#x2708;</div>
+
+        <!-- 'SOURCE' > 'DESTINY' -->
+        <div class="source-and-destiny">
+            
+            <div class="source-name">
+                <div id="source-name"></div>
+                <span>|</span>
+                <div id="source-airport"></div>
+            </div>
+
+            <span>&#x2192;</span>
+
+            <div class="destiny-name">
+                <div id="destiny-name"></div>
+                <span>|</span>
+                <div id="destiny-airport"></div>
+            </div>
+            
+        </div>
+
+        <!-- TRAVEL SCHEDULE -->
+        <div class="travel-schedule">
+            <!-- LT-->
+            <div class="lt"><i class="fa-sharp fa-solid fa-chevron-left"></i></div>
+
+            <!-- FLIGHT CARROUSEL -->   
+            <div class="flight-carrousel">
+
+                <!-- IF THERE'S NO FLIGHT FOR A DAY -->
+                <div class="source-schedule-no">
+                    <div id="source-day-month" class="source-day-month"></div>
+                    <span style="font-size: 13px; color: gray">No flights</span>
+                </div>
+
+                <!-- IF THERE'S FLIGHT FOR A DAY -->
+                <div class="source-schedule-yes">
+                    <div id="source-day-month" class="source-day-month"></div>
+                    <span style="font-weight: lighter; font-size: 13px;">From</span>
+                    <span id="source-cost" class="source-cost"></span>
+                </div>
+
+                <!-- IF THERE'S NO FLIGHT FOR A DAY -->
+                <div class="source-schedule-no">
+                    <div id="source-day-month" class="source-day-month"></div>
+                    <span style="font-size: 13px; color: gray">No flights</span>
+                </div>
+
+                <!-- IF THERE'S FLIGHT FOR A DAY -->
+                <div class="source-schedule-yes">
+                    <div id="source-day-month" class="source-day-month"></div>
+                    <span style="font-weight: lighter; font-size: 13px;">From</span>
+                    <span id="source-cost" class="source-cost"></span>
+                </div>
+
+            </div>
+
+            <!-- GT-->
+            <div class="gt"><i class="fa-sharp fa-solid fa-chevron-right"></i></div>
+        </div>
+
+        <!-- 'SOURCE SCHEDULE' -> 'DESTINY SCHEDULE' -->
+        <div class="time-details">
+
+            <div class="source-schedule-year">
+                <span id="source-month-year" class="source-month-year"></span>
+                <span id="source-hour" class="source-hour"></span>
+                <span id="source-city" class="source-city"></span>
+            </div>
+
+            <div class="source-schedule-time"></div>
+            
+            <div class="destiny-schedule-year">
+                <span id="destiny-month-year" class="source-month-year"></span>
+                <span id="destiny-hour" class="destiny-hour"></span>
+                <span id="destiny-city" class="destiny-city"></span>
+            </div>
+        </div>
+
+        <!-- SELECT BUNDLE -->
+        <button class="select-bundle">SELECT BUNDLE</button>
+    </div>
+
+    <script>
+     
+     const flightSchedule = [
+     {
+          "id": 1,
+          "cityName": 'Bucharest',
+          "airportAbreviation": 'OTP',
+          "flightPrice": '264',
+          "flightSourceInfo": {
+               "weekDay": 'Thuesday',
+               "day": '2',
+               "hour": '13:40',
+               "month": 'May',
+               "year": '2019'
+          },
+          "flightDurationMinutes": '375',
+          "flightDestinyInfo": {
+               "weekDay": 'Thuesday',
+               "day": 2,
+               "hour": '17:55',
+               "month": 'May',
+               "year": '2019',
+               "cityName": 'Tenerife (Canary Islands)',
+               "airportAbreviation": 'TFS'
+          }
+     },
+     ]
+
+     // Source info
+     const sourceName = document.querySelector('#source-name');
+     const sourceAirport = document.querySelector('#source-airport');
+     const sourceDayMonth = Array.from(document.querySelectorAll('#source-day-month'));
+     const sourceDayMonthYear = document.querySelector('#source-day-year');
+     const sourceCost = document.querySelector('#source-cost');
+
+     const destinyName = document.querySelector('#destiny-name');
+     const destinyAirport = document.querySelector('#destiny-airport');
+
+     sourceName.innerHTML = flightSchedule[0].cityName;
+     sourceAirport.innerHTML = flightSchedule[0].airportAbreviation;
+
+     let weekDay = flightSchedule[0].flightSourceInfo.weekDay.slice(0, 3);
+     let day = flightSchedule[0].flightSourceInfo.day;
+     if (day < 10) {
+          day = '0' + day;
+          }
+     let month = flightSchedule[0].flightSourceInfo.month.slice(0, 3);
+
+     sourceDayMonth.forEach(item => {
+          item.innerHTML = `${weekDay} ${day}, ${month}`;
+          })
+     sourceCost.innerHTML = `&dollar;${flightSchedule[0].flightPrice}`;
+
+     // Destiny info
+     destinyName.innerHTML = flightSchedule[0].flightDestinyInfo.cityName;
+     destinyAirport.innerHTML = flightSchedule[0].flightDestinyInfo.airportAbreviation;
+
+    </script>
+</body>
+
+</html>
