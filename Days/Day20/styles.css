@@ -6,7 +6,7 @@
      align-items: center;
      height: 100vh;
  }
- 
+
   /* ///////////////////////////// */
   /* BACKGROUND ORANGE COLOR UX??? */
   /* ///////////////////////////// */
@@ -20,7 +20,7 @@
      border-radius: 5px;
      z-index: 0;
  }
- 
+
   /* ///////////////////////////// */
   /* MAIN CONTAINER -> MAGIC HAPPENS */
   /* ///////////////////////////// */
@@ -36,7 +36,7 @@
      grid-template-rows: 1fr 0.8fr 1.2fr 1.2fr 0.6fr;
      z-index: 1;
  }
- 
+
   /* ///////////////////////////// */
   /*  */
   /* ///////////////////////////// */
@@ -82,7 +82,7 @@
   /* /////////GRID ROW : 3 //////// */
   /* //////// TRAVEL SCHEDULE ///// */
   /* ////////////////////////////// */
-.travel-schedule { 
+.travel-schedule {
     grid-row: 3;
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
@@ -184,7 +184,7 @@
   }
 
 
- 
+
   /* ///////////////////////////// */
   /* MEDIA QUERY'S RESPONSIVENESS */
   /* ///////////////////////////// */
@@ -227,4 +227,3 @@
          height: 450px;
      }
  }
- 
