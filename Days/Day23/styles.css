@@ -71,6 +71,7 @@ body {
      display: grid;
      grid-template-rows: repeat(4, 1fr);
      grid-template-columns: repeat(2, 1fr);
+     align-items: center;
      width: 300px;
      height: 150px;
      border-radius: 1px;
@@ -81,7 +82,8 @@ body {
 
 .app-card img {
      grid-column: 1;
-     grid-row: 1 / 2;
+     grid-row: 1 / -1;
+     justify-self: center;
      width: 100px;
      height: 100px;
      border-radius: 15%;
@@ -89,10 +91,13 @@ body {
 .app-title {
      grid-row: 1;
      grid-column: 2;
+     font-size: 15px;
+     font-weight: bold;
 }
 .app-company {
      grid-row: 2;
      grid-column: 2;
+     font-size: 12px;
 }
 .app-rate {
      grid-row: 3;
