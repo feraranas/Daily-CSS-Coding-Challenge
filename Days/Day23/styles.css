@@ -3,12 +3,12 @@ body {
      font-family: 'Poppins', sans-serif;
      background-color: #3d3d3f;
  }
- 
+
  .app {
      display: grid;
      grid-template-rows: 0.1fr 0.9fr;
  }
- 
+
  /* ////////////////// */
  /* HEADER NAV BAR*/
  /* ////////////////// */
@@ -36,8 +36,8 @@ body {
  .header li:hover {
      color: #73D5CD;
  }
- 
- 
+
+
 /* ////////////////// */
 /* APP SEARCH BODY    */
 /* ////////////////// */
@@ -45,7 +45,7 @@ body {
     width: 100vw;
     padding: 50px;
 }
-.body-title { 
+.body-title {
     font-size: calc(8px + 2vmin);
     font-weight: lighter;
     color: white;
@@ -66,7 +66,7 @@ body {
     row-gap: 25px;
     margin: 20px;
 }
- 
+
 .app-card {
      display: grid;
      grid-template-rows: repeat(4, 1fr);
@@ -131,11 +131,11 @@ body {
     .body-container-grid > :nth-child(3n - 2) {
          justify-self: end;
     }
-       
+
     .body-container-grid > :nth-child(3n - 1) {
          justify-self: center;
     }
-       
+
     .body-container-grid > :nth-child(3n) {
          justify-self: start;
     }
