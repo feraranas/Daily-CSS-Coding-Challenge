@@ -1,0 +1,198 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8c1f754ca0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+     <!-- MAIN CONTAINER -->
+     <div class="main-container">
+          <!-- LEFT CONTAINER -->
+          <div class="login-container">
+
+               <div class="change-account">
+                    <span>CHANGE ACCOUNT</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+               </div>
+
+               <img class="user-photo-v1" src="https://drive.google.com/uc?export=view&id=1AI77xrXBq2J5vdjUrpfVeTp8BbhTqKy_" alt='aryastark'>
+
+               <div class="welcome-back">Welcome back,</div>
+               <div class="user-name-v1">Arya</div>
+               <input type="password" class="user-password" placeholder="Enter your password">
+               <button class="login-button">LOG IN</button>
+               <a href="" class="retrieve-password">Unable to log in?</a>
+
+
+          </div>
+
+          <!-- MIDDLE CONTAINER -->
+          <div class="main-menu-container">
+
+               <!-- HEADER -->
+               <div class="menu-header">
+                    <img class="user-photo-v2" src="https://drive.google.com/uc?export=view&id=1AI77xrXBq2J5vdjUrpfVeTp8BbhTqKy_" alt="aryastark">
+                    <div class="user-name-v2">Arya</div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+               </div>
+
+               <!-- MULTIPLE TARGET CONTAINER -->
+               <div class="multiple-targets-container">
+
+                    <!-- TARGET -->
+                    <div class="target-container" data-key="1">
+                         <span>Targets</span>
+                         <div class="target-done-count">
+                              2
+                         </div>
+                    </div>
+                    <!-- TARGET -->
+                    <div class="target-container" data-key="2">
+                         <span>Targets</span>
+                         <div class="target-done-count">
+                              2
+                         </div>
+                    </div>
+
+               </div>
+
+               <!-- ADD NEW TARGET FOOTER -->
+               <div class="add-new-list">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>ADD NEW LIST</span>
+               </div>
+          </div>
+
+          <!-- RIGHT CONTAINER -->
+          <div class="target-container-list">
+
+               <!-- HEADER BUTTON -->
+               <div class="header-go-back">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Targets</span>
+                    <i class="fa-solid fa-ellipsis"></i>
+               </div>
+
+               <!-- INDIVIDUAL LIST OF TARGETS (TODOs)-->
+               <div class="individual-target-list">
+
+                    <div class="todo-target" data-key="1">
+                         <span class="">Cersei Lannister</span>
+                         <div class="todo-check">
+                              <i class="fa-solid fa-check hidden"></i>
+                         </div>
+                    </div>
+
+                    <div class="todo-target" data-key="2">
+                         <span class="">Cersei Lannister</span>
+                         <div class="todo-check">
+                              <i class="fa-solid fa-check hidden"></i>
+                         </div>
+                    </div>
+
+                    <div class="todo-target button-disabled" data-key="3">
+                         <span class="text-disabled">Cersei Lannister</span>
+                         <div class="todo-check check-disabled">
+                              <i class="fa-solid fa-check"></i>
+                         </div>
+                    </div>
+
+               </div>
+
+               <!-- FOOTER BUTTON -->
+               <div class="footer-add-new">
+                    <i class="fa-solid fa-plus footer"></i>
+                    <div class="add-new-target">ADD NEW</div>
+               </div>
+          </div>
+     </div>
+
+    <script>
+     /* global Lista de objetos
+     -> le agregamos un objeto (lista) cada que el usuario cree una nueva lista
+     -> cada objeto tiene: 
+          - id
+          - lista de todos
+               - para cada todo (estado: completado o No completado)
+     */
+     const targets = [
+          {
+               key: 1,
+               title: "Targets",
+               todos: [
+                    { name: "Cersei Lannister", done: false },
+                    { name: "The Mountain", done: false}, 
+                    { name: "Beric Dondarrion", done: false },
+                    { name: "Thoros of Myr", done: false},
+                    { name: "Ilyn Payne", done: false},
+                    { name: "The Hound", done: false},
+                    { name: "Walder Frey", done: false},
+                    { name: "Meryn Trent", done: false},
+               ]
+
+          },
+     ]
+
+     /* Obtenemos el container de Targets */
+     const targetsContainer = document.querySelector('.multiple-targets-container');
+
+     /* Obtenemos todos los Targets */
+     const targetList = Array.from(document.querySelectorAll('.target-container'))
+
+     /* Obtenemos el boton de 'Add New List' */
+     const addNewTarget = document.querySelector('.add-new-list');
+
+     /* Event listener para agregar un nuevo Target */
+     addNewTarget.addEventListener('click', function () {
+          /* Captamos el titulo de la lista */
+          let userInput = prompt("Nombre de la nueva lista:");
+          const newTargetTitle = truncateString(userInput)
+
+          /* Creamos un objeto para guardar Target y sus Todos */
+          const currentKey = targetsContainer.children.length + 1;
+          const nuevoTarget = {
+               key: currentKey,
+               title: userInput,
+               todos: []
+          }
+          targets.push(nuevoTarget)
+
+          /* Armamos HTML para la lista */
+          const newTarget = document.createElement('div');
+          const targetTitle = document.createElement('span');
+          const targetTodoCount = document.createElement('div');
+
+          /* Agregamos estilos */
+          newTarget.classList.add('target-container');
+          targetTodoCount.classList.add('target-done-count');
+          newTarget.dataset.key = currentKey;
+          targetTitle.innerHTML = newTargetTitle;
+          newTarget.appendChild(targetTitle);
+          const nT = targetKey(currentKey)
+          targetTodoCount.innerHTML = nT.todos.length
+          newTarget.appendChild(targetTodoCount);
+
+          targetsContainer.appendChild(newTarget);
+     });
+
+
+     /* Función que calcula el 'key' siguiente de la lista 'targets' */
+     function targetKey(llave) {
+          return targets.find(item => item.key === llave)
+     }
+
+     function truncateString(str) {
+          if (str.length > 12) {
+               console.log(str.substr(0, 12) + "...")
+               return str.substr(0, 12) + "...";
+          }
+          return str;
+     }
+
+    </script>
+</body>
+
+</html>
