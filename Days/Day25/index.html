@@ -1,0 +1,179 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8c1f754ca0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- MAIN CONTAINER -->
+    <div class="main-container">
+
+        <!-- ARTICLE RESUME CONTAINER -->
+        <div id="article-resume" class="article-resume-container">
+
+            <!-- BOOKMARK -->
+            <i id="bm" class="fa-regular fa-bookmark"></i>
+
+            <!-- ARTICLE TITLE -->
+            <div class="article-title">Always Look On The Bright Side Of Life</div>
+
+            <!-- ARTICLE AUTHOR -->
+            <div class="article-author">Daniel A. Schmaltz</div>
+
+            <!-- ARTICLE DATE -->
+            <div class="article-date">
+                2 hours ago
+            </div>
+
+            <!-- ARTICLE RESUME -->
+             <div class="article-resume">I was always somebody who felt quite sorry for myself, what I had not got compared to my friends, how much of a struggle my life seemed to be compared to others. I was caught up in a web of negativity and needed...</div>
+
+             <!-- READ MORE -->
+             <div class="read-more">
+                 <span>READ MORE</span>
+                <i class="fa-solid fa-angles-right"></i>
+            </div>
+        </div>
+
+        <!-- ARTICLE TITLE CONTAINER 1 -->
+        <div id="article-header" class="article-header title-1">
+
+            <!-- BOOKMARK -->
+            <i id="bm" class="fa-regular fa-bookmark"></i>
+
+            <!-- IMAGE -->
+            <img src="https://unsplash.it/150/150" alt="article-image">
+
+            <!-- ARTICLE TITLE -->
+            <div class="article-title">A Brief History of Creation</div>
+
+            <!-- ARTICLE AUTHOR -->
+            <div class="article-author">Eugene Franklin</div>
+            
+            <!-- ARTICLE DATE -->
+            <div class="article-date">
+                10:30PM
+            </div>
+        </div>
+
+        <!-- ARTICLE TITLE CONTAINER 2 -->
+        <div id="article-header" class="article-header title-2">
+
+            <!-- BOOKMARK -->
+            <i id="bm" class="fa-regular fa-bookmark"></i>
+
+            <!-- IMAGE -->
+            <img src="https://unsplash.it/150/150" alt="article-image">
+            
+            <!-- ARTICLE TITLE -->
+            <div class="article-title">The Importance Of Human Life</div>
+            
+            <!-- ARTICLE AUTHOR -->
+            <div class="article-author">Cole Phillips</div>
+            
+            <!-- ARTICLE DATE -->
+            <div class="article-date">
+                10:32AM
+            </div>
+        </div>
+
+        <!-- ARTICLE TITLE CONTAINER 3 -->
+        <div id="article-header" class="article-header title-3">
+
+            <!-- BOOKMARK -->
+            <i id="bm" class="fa-regular fa-bookmark"></i>
+
+            <!-- IMAGE -->
+            <img src="https://unsplash.it/150/150" alt="article-image">
+            
+            <!-- ARTICLE TITLE -->
+            <div class="article-title">The Basics Of Western Astrology Explained</div>
+            
+            <!-- ARTICLE AUTHOR -->
+            <div class="article-author">Mark Greene</div>
+            
+            <!-- ARTICLE DATE -->
+            <div class="article-date">
+                06:25PM
+            </div>
+        </div>
+
+        <!-- TOP BLOGGERS CONTAINER -->
+        <div class="top-bloggers">
+
+            <!-- TOP BLOGGERS OF THE WEEK -->
+            <div class="article-title">Top Bloggers this week</div>
+
+            <!-- VIEW ALL -->
+            <div class="read-more">
+                <span>VIEW ALL</span>
+                <i class="fa-solid fa-angles-right"></i>
+            </div>
+
+            <!-- PROFILES -->
+            <div class="profiles">
+                <!-- PROFILE 1 -->
+                <div class="profile-container">
+                    
+                    <div class="rank">1</div>
+
+                    <img src="https://i.pravatar.cc/50" alt="profile-pic">
+                    <div class="article-author">Elva Malone</div>
+                    <div class="article-date">
+                        3455 Followers
+                    </div>
+                </div>
+
+                <!-- PROFILE 2 -->
+                <div class="profile-container">
+
+                    <div class="rank">2</div>
+
+                    <img src="https://i.pravatar.cc/50" alt="profile-pic">
+                    <div class="article-author">Mina Rodgers</div>
+                    <div class="article-date">
+                        3119 Followers
+                    </div>
+                </div>
+
+                <!-- PROFILE 3 -->
+                <div class="profile-container">
+
+                    <div class="rank">3</div>
+
+                    <img src="https://i.pravatar.cc/50" alt="profile-pic">
+                    <div class="article-author">Lucy Bush</div>
+                    <div class="article-date">
+                        2566 Followers
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* Getting the bookmark for each container */
+        const bmArticleResume = document.querySelector('#article-resume');
+        const bmArticleHeader = document.querySelectorAll('#article-header');
+
+        /* If the bookmark is clicked */
+        bmArticleResume.children.bm.addEventListener('click', () => {
+          bmArticleResume.children.bm.classList.toggle('fa-regular')
+          bmArticleResume.children.bm.classList.toggle('fa-solid')
+        })
+
+        bmArticleHeader.forEach(item => {
+          item.children.bm.addEventListener('click', () => {
+               item.children.bm.classList.toggle('fa-regular')
+               item.children.bm.classList.toggle('fa-solid')
+          })
+        })
+        
+    </script>
+</body>
+
+</html>
