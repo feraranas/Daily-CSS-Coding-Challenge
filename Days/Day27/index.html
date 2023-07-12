@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- MAIN CONTAINER -->
+    <div class="main-container">
+
+        <!-- MAIN CONTAINER -> NAV BAR-->
+        <div class="main-container-header">
+            <div class="header-option">FLIGHTS</div>
+            <div class="header-option">HOTELS</div>
+            <div class="header-option">CARS</div>
+        </div>
+
+        <!-- BIG INTERIOR CONTAINER -->
+        <div class="interior-container">
+
+            <!-- ARROW SVG -->
+            <div class="arrow">
+                <svg width="100" height="100">
+                    <polygon fill="black" points="25,0 30,10 20,10"/>
+                    <line x1="25" y1="2.5" x2="25" y2="85" stroke="black" stroke-width="1"/>
+                    <polygon fill="black" points="25,95 30,85 20,85"/>
+                </svg>
+            </div>
+            
+            <!-- ORIGIN CONTAINER -> 1ST ROW -->
+            <div class="origin">
+                <span>Origin</span>
+                <input type="text" placeholder="Search an origin.">
+            </div>
+
+            <!-- DESTINATION CONTAINER -> 2ND ROW -->
+            <div class="destination">
+                <span>Destination</span>
+                <input type="text" placeholder="Search a destination.">
+            </div>
+
+            <!-- FLIGHT DETAILS CONTAINER -> 3RD ROW -->
+            <div class="flight-details">
+
+                <!-- DEPARTURE CONTAINER -->
+                <div class="departure">
+                    <span>Departure</span>
+                    <input type="date" placeholder="Departure Date">
+                </div>
+
+                <!-- ARRIVAL CONTAINER -->
+                <div class="arrival">
+                    <span>Arrival</span>
+                    <input type="date" placeholder="Arrival Date">
+                </div>
+
+                <!-- PASSENGERS CONTAINER -->
+                <div class="passengers">
+                    <span>Passengers</span>
+                    <input type="number" placeholder="Passengers">
+                </div>
+            </div>
+
+            <!-- BUTTON SEARCH -> 4TH ROW -->
+            <button class="search-button">
+                SEARCH
+            </button>
+
+            <!-- MORE INFO TEXT -> 5TH ROW -->
+            <div class="more-info">
+                Flexible on Dates?
+            </div>
+        </div>
+    </div> 
+
+    <script>
+     const navItemsHeader = Array.from(document.querySelectorAll('.header-option'))
+
+     navItemsHeader.forEach((item) => {
+          item.addEventListener('click', (e) => {
+               /* Remove 'clicked' class if any */
+               navItemsHeader.forEach((e) => e.classList.remove('clicked-header'))
+
+               /* Add 'clicked-header' class to the item that was clicked */
+               item.classList.add('clicked-header')
+          })
+     })
+    </script>
+</body>
+
+</html>
