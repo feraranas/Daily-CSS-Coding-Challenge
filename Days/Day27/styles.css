@@ -232,16 +232,16 @@ body {
     background-color: #8E92D0;
     box-shadow: 0px 0px 20px rgba(142, 146, 208, 0.5);
     font-weight: 500;
-    color: white;    
+    color: white;
     transition: 0.7s all ease;
 }
 .search-button:hover {
     grid-row: 4;
     grid-column: 2;
     height: 90%;
-    background-color: white;   
-    border: 1px solid rgba(142, 146, 208, 0.5); 
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); 
+    background-color: white;
+    border: 1px solid rgba(142, 146, 208, 0.5);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
     color: #8E92D0;
     font-family: 600;
 }
