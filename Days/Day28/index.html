@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="styles.css">
+     <script src="https://kit.fontawesome.com/8c1f754ca0.js" crossorigin="anonymous"></script>
+     <title>Keyboard</title>
+</head>
+<body>
+     <div class="container">
+          <div class="keys">
+               <!-- FIRST ROW-->
+               <div class="first-row">
+                    <div class="key" data-key="q">Q</div>
+                    <div class="key" data-key="w">W</div>
+                    <div class="key" data-key="e">E</div>
+                    <div class="key" data-key="r">R</div>
+                    <div class="key" data-key="t">T</div>
+                    <div class="key" data-key="y">Y</div>
+                    <div class="key" data-key="u">U</div>
+                    <div class="key" data-key="i">I</div>
+                    <div class="key" data-key="o">O</div>
+                    <div class="key" data-key="p">P</div>
+               </div>
+
+               <!-- SECOND ROW-->
+               <div class="second-row">
+                    <div class="key" data-key="a">A</div>
+                    <div class="key" data-key="s">S</div>
+                    <div class="key" data-key="d">D</div>
+                    <div class="key" data-key="f">F</div>
+                    <div class="key" data-key="g">G</div>
+                    <div class="key" data-key="h">H</div>
+                    <div class="key" data-key="j">J</div>
+                    <div class="key" data-key="k">K</div>
+                    <div class="key" data-key="l">L</div>
+               </div>
+
+               <!-- THIRD ROW -->
+               <div class="third-row">
+                    <div class="key" data-key="Shift">
+                         <svg>
+                              <polygon points="20,45 42.5,26 65,45 47.5,45 47.5,65 37.5,65 37.5,45" stroke-linejoin="round" stroke-width="7" stroke="white" fill="white" />
+                         </svg>
+                    </div>
+                    <div class="inner-row">
+                         <div class="key" data-key="z">Z</div>
+                         <div class="key" data-key="x">X</div>
+                         <div class="key" data-key="c">C</div>
+                         <div class="key" data-key="v">V</div>
+                         <div class="key" data-key="b">B</div>
+                         <div class="key" data-key="n">N</div>
+                         <div class="key" data-key="m">M</div>
+                    </div>
+                    <div class="key" data-key="Backspace">
+                         <i class="fa-solid fa-delete-left"></i>
+                    </div>
+               </div>
+
+               <!-- FOURTH ROW-->
+               <div class="fourth-row">
+                    <div class="key" data-key="1" data-key="2" data-key="3">123</div>
+                    <div class="key" data-key="world">
+                         <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div class="key" data-key="mic">
+                         <i class="fa-solid fa-microphone"></i>
+                         <!-- <i class="fa-solid fa-microphone-slash" hidden></i> -->
+                    </div>
+                    <div class="key" data-key=" ">space</div>
+                    <div class="key" data-key="search">Search</div>
+               </div>
+          </div>
+     </div>
+
+     <script>
+          /* Select all keys */
+          const keys = document.querySelectorAll('.key')
+          
+          /* Detect 'transitionend' for each key */
+          keys.forEach(key => key.addEventListener('transitionend', removeTransition))
+
+          /* Animate a key touched */
+          function playKey(e) {
+               const kbd = document.querySelector(`.key[data-key="${e.key}"]`)
+               kbd.classList.add('play')
+          }
+
+          /* Remove class 'play' */
+          function removeTransition(e) {
+               this.classList.remove('play')
+          }
+
+          /* Detect on key plays */
+          window.addEventListener('keydown', playKey)
+
+
+     </script>
+</body>
+</html>
