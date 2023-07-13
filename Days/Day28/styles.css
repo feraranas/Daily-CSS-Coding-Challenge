@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap');
+
+body {
+     height: 100vh;
+     background-color: #2A4BA4;
+     margin: 0;
+     padding: 0;
+     font-size: 10px;
+     display: grid;
+     font-family: 'Nunito', sans-serif;
+     font-weight: 300;
+}
+.container {
+     margin: auto;
+     background-color: #2B368E;
+     box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+     border-radius: 10px;
+     padding: 20px;
+ }
+
+/* INNER *KEYS CONTAINER */
+.keys {
+     display: grid;
+     row-gap: 18px;
+     color: white;
+     font-size: 2.5rem;
+ }
+/* INDIVIDUAL KEY STYLE */
+.key {
+     background-color: #283079;
+     border-radius: 10px;
+     display: grid;
+     height: 90px;
+     width: 65px;
+     align-items: center;
+     text-align: center;
+     transition: 0.1s all ease;
+ }
+
+/* FIRST ROW */
+.first-row {
+     grid-row: 1;
+     column-gap: 10px;
+     display: grid;
+     grid-template-columns: repeat(10, 1fr);
+ }
+ /* SECOND ROW */
+ .second-row {
+     grid-row: 2;
+     justify-self: center;
+     column-gap: 10px;
+     display: grid;
+     grid-template-columns: repeat(9, 1fr);
+ }
+ /* THIRD ROW */
+ .third-row {
+     grid-row: 3;
+     display: grid;
+     justify-self: center;
+     column-gap: 19px;
+     grid-template-columns: 0.2fr 1.1fr 0.2fr;
+ }
+ .key[data-key='Shift'] {
+     grid-column: 1;
+     background-color: #1D2766;
+     width: 85px;
+     justify-self: start;
+     position: relative;
+ }
+ .key[data-key='Shift'] > svg {
+     position: absolute;
+     top: 0;
+     left: 0px;
+ }
+ .inner-row {
+     grid-column: 2;
+     justify-self: center;
+     column-gap: 10px;
+     display: grid;
+     grid-template-columns: repeat(7, 1fr);
+ }
+ .key[data-key=Backspace] {
+     background-color: #DF315B;
+     width: 85px;
+     justify-self: end;
+ }
+ /* FOURTH ROW */
+.fourth-row {
+     justify-self: space-between;
+     grid-row: 4;
+     display: grid;
+     column-gap: 10px;
+     grid-template-columns: repeat(9, 1fr);
+     font-size: 2rem;
+}
+.key[data-key='1'] {
+     grid-column: 1 / 2;
+     width: 100%;
+}
+.key[data-key='2'] {
+     grid-column: 1 / 2;
+     width: 100%;
+}
+.key[data-key='3'] {
+     grid-column: 1 / 2;
+     width: 100%;
+}
+.key[data-key='world'] {
+     grid-column: 2 / 3;
+     width: 100%;
+}
+.key[data-key='mic'] {
+     grid-column: 3 / 4;
+     width: 100%;
+}
+.key[data-key=' '] {
+     grid-column: 4 / 8;
+     width: 100%;
+}
+.key[data-key='search'] {
+     grid-column: 8 / 10;
+     width: 100%;
+}
+/* KEY DOWN ANIMATION */
+.play {
+     transform: scale(1.1);
+     border-color: #ffc600;
+     box-shadow: 0 0 1rem #ffc600;
+}
