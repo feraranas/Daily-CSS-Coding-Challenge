@@ -43,7 +43,7 @@ function moveRight() {
   imgCarrousel.scrollLeft += 100; // Scroll right by 250 pixels
 }
 
-window.onload = function () {
+window.onload = function() {
   setTimeout(() => {
     imgCarrousel.children[initKey].style.height = '250px';
     imgCarrousel.children[initKey].style.width = '250px';
