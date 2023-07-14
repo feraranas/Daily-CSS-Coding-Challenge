@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap');
+
+body {
+     margin: 0;
+     padding: 0;
+     height: 100vh;
+     font-size: 10px;
+     font-family: 'Nunito', sans-serif;
+     color: white;
+     overflow-x: hidden;
+     overscroll-behavior-x: none;
+     overscroll-behavior-y: none;
+ }
+
+ /* SECTION -> NAV BAR */
+nav {
+     position: sticky;
+     top: 0;
+     background-color: #8646FF;
+ }
+ .nav-items {
+     display: grid;
+     grid-template-columns: repeat(5, 1fr);
+     margin: auto;
+     justify-content: center;
+     gap: 15px;
+     width: 1000px;
+     height: 100px;
+     background-color: #8646FF;
+     border-radius: 0px 0px 10px 10px;
+     align-items: center;
+     text-decoration: none;
+     list-style-type: none;
+     text-align: center;
+     font-size: 1.3rem;
+ }
+nav > :nth-child(1) {
+     grid-column: 1;
+     grid-row: 1 / -1;
+     cursor: pointer;
+}
+nav > :nth-child(2) {
+     grid-column: 2;
+     grid-row: 1 / -1;
+     cursor: pointer;
+}
+nav > :nth-child(3) {
+     grid-column: 4;
+     grid-row: 1 / -1;
+     cursor: pointer;
+}
+nav > :nth-child(4) {
+     grid-column: 5;
+     grid-row: 1 / -1;
+     cursor: pointer;
+}
+.center-logo{
+     grid-column: 3;
+     grid-row: 1 / -1;
+     text-align: center;
+     justify-items: center;
+     display: grid;
+     align-items: center;
+     border-radius: 10px;
+     width: 220px;
+     height: 105px;
+     background-color: #DBFC6F;
+}
+.center-logo > img {
+     width: 160px;
+}
+/* SECTION -> MAIN CONTAINER */
+.main-container {
+     height: 650px;
+     width: 100%;
+     background-image: url(./images/tennis.jpg);
+     background-size: 100% 680px;
+     display: grid;
+     justify-items: center;
+     align-items: center;
+     grid-template-rows: 1fr 1fr 1fr;
+     color: white;
+ }
+.page-title {
+     grid-row: 1;
+     font-size: 3rem;
+     width: 50%;
+     text-align: center;
+}
+.page-title > img {
+     width: 175px;
+}
+.page-description{
+     grid-row: 2;
+     width: 65%;
+     font-size: 1.25rem;
+     text-align: justify;
+}
+.callout-button{
+     border-radius: 10px;
+     background-color: #DBFC6F;
+     color: black;
+     width: 300px;
+     height: 100px;
+     font-size: 1.5rem;
+     letter-spacing: 1.3px;
+     grid-row: 3;
+     border: 0px solid black;
+     cursor: pointer;
+}
+.callout-button::after{
+     content: 'Unete ahora'
+}
+.callout-button:hover{
+     color: white;
+     background-color: #8646FF;
+     border: 2px solid #8646FF;
+}
+/* SECTION IMAGE CARROUSEL */
+.img-carrousel {
+     background: #8646FF;
+     height: 400px;
+     gap: 20px;
+     width: 100%;
+     align-items: center;
+     display: grid;
+     grid-template-columns: 0.1fr 0.8fr 0.1fr;
+ }
+.button-left {
+     text-align: center;
+     font-size: 6rem;
+}
+.button-left > .fa-caret-left {
+     cursor: pointer;
+}
+.images {
+     grid-column: 2;
+     align-items: center;
+     display: grid;
+     gap: 10px;
+     overflow-x: scroll;
+     height: 100%;
+     width: 100%;
+     grid-template-columns: repeat(7, 1fr);
+     transition: 0.5s scroll ease;
+ }
+ .images > img {
+     width: 200px;
+     height: 200px;
+     overflow-x: clip;
+     overflow-y: clip;
+     border-radius: 2px;
+     transition: 0.5s transform ease;
+ }
+.button-right {
+     text-align: center;
+     font-size: 6rem;
+     cursor: pointer;
+}
+.button-right > .fa-caret-right {
+     cursor: pointer;
+}
