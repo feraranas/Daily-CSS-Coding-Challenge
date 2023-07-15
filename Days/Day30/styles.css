@@ -1,0 +1,205 @@
+/* Add CSS here */
+html {
+     font-size: 10px; /* For ROOT ELEMENT (REM) references */
+}
+body {
+     display: grid;
+     height: 100vh;
+     width: 100vw;
+     background-color: #2F7A3F;
+     overscroll-behavior-y: none;
+     font-family: 'Nunito', sans-serif;
+     font-weight: 300;
+     color: #1F4A88;
+ }
+/* //////////////////////////////////////////////////////////////////////////////////////////*/
+/* MAIN CONTAINER */
+.main-container {
+     width: 550px;
+     height: 450px;
+     justify-self: center;
+     align-self: center;
+     box-shadow: 0px 0px 10px #0000001a;
+     border-radius: 4px;
+     background-color: #fbfafa;
+ }
+/* CONTAINER NAV BAR */
+.container-nav-bar {
+     font-size: 2.5rem;
+     width: 100%;
+     height: 85px;
+ }
+.container-nav-bar > .nav-bar {
+    display: grid;
+    grid-template-columns: 0.1fr 0.25fr 0.1fr 0.25fr 0.1fr 0.25fr 0.1fr;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.nav-bar > :nth-child(even) {
+    width: 80%;
+    justify-self: center;
+    text-align: center;
+}
+/* fa-truck
+fa-cart-shopping
+fa-credit-card
+fa-credit-card
+fa-file-invoice */
+
+/* EVERYONE SHARES SAME DIV - TITLE */
+.div-title {
+    font-size: 1.2rem;
+    color: #7D8F9A;
+    justify-self: start;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////*/
+/* CONTAINER SHOPPING CART */
+.shopping-cart-container {
+    visibility: hidden;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////*/
+/* CONTAINER DELIVERY ADDRESS */
+.delivery-address-container {
+    visibility: hidden;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////*/
+/* CONTAINER PAYMENT METHOD */
+.payment-method-container {
+     background-color: white;
+     width: 100%;
+     height: 365px;
+     border-radius: 0px 0px 4px 4px;
+ }
+.payment-method {
+    display: grid;
+    grid-template-rows: 0.2fr 0.5fr;
+    grid-template-columns: 0.5fr 1fr;
+    row-gap: 10px;
+    height: inherit;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.card-companies {
+     grid-row: 2;
+     grid-column: 1;
+     display: grid;
+     grid-template-rows: repeat(3, 1fr);
+     gap: 15px;
+     width: 100%;
+     height: 100%;
+ }
+ .company {
+     width: 135px;
+     height: 80px;
+     justify-content: center;
+     display: grid;
+     align-content: center;
+     text-align: center;
+     box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+ }
+.company:hover {
+    width: 133px;
+    height: 78px;
+    border: 1px solid #734BF3;
+    cursor: pointer;
+}
+.visa {
+    width: 110px;
+}
+.paypal {
+    width: 120px;
+}
+.bitcoin {
+    width: 65px;
+}
+.card-data {
+     grid-row: 2;
+     grid-column: 2;
+     height: 100%;
+     display: grid;
+     grid-template-rows: 0.85fr 0.15fr;
+     row-gap: 15px;
+ }
+ .card-data > form {
+     grid-row: 1;
+     height: 100%;
+     display: grid;
+     grid-template-columns: 0.8fr 0.1fr;
+     grid-template-rows: 1fr 1fr 1fr;
+     column-gap: 5px;
+     background-color: #fbfafa;
+     padding-top: 10px;
+     padding-left: 15px;
+ }
+form > .card-number{
+    grid-row: 1;
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-rows: 0.15fr 0.6fr;
+    gap: 7.5px;
+}
+input[type=number] {
+     border: none;
+}
+input[type=number]:focus {
+     outline: 1px solid dimgrey;
+}
+input[type=date] {
+     border: none;
+}
+input[type=date]:focus {
+     outline: 1px solid dimgrey;
+}
+input[type=text] {
+     border: none;
+}
+input[type=text]:focus {
+     outline: 1px solid dimgrey;
+}
+form > .expiration-date {
+    grid-row: 2;
+    grid-column: 1;
+    display: grid;
+    grid-template-rows: 0.15fr 0.6fr;
+    gap: 7.5px;
+}
+form > .cvv {
+    grid-row: 2;
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 0.15fr 0.6fr;
+    gap: 7.5px;
+}
+form > .card-holder-name {
+    grid-row: 3;
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-rows: 0.15fr 0.6fr;
+    gap: 7.5px;
+}
+
+.card-data > button {
+    grid-row: 2;
+    height: 100%;
+    width: 100%;
+    background-color: #E4443C;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////*/
+/* INVOICE ORDER CONTAINER */
+.invoice-order {
+    visibility: hidden;
+}
