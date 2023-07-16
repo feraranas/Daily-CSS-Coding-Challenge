@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,500&display=swap');
+
+:root {
+    --theme-main-color: #E4443C;
+    --theme-submain-color: #FF6F68;
+    --theme-font-color: #FFF5EE;
+    font-size: 11px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    color: var(--theme-font-color);
+    font-family: 'Open Sans', sans-serif;
+    /* font-weight: 400; */
+}
+.page-container {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.page-container::before {
+  content: "";
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  background-image: url(https://picsum.photos/1000);
+  background-size: cover;
+  filter: blur(10px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.inner-container {
+    grid-column: 2;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 0.1fr 0.8fr 0.9fr;
+}
+/* ROW 1 */
+nav {
+    grid-row: 1;
+    width: 100%;
+    border-bottom: 1px solid var(--theme-main-color);
+    display: grid;
+    justify-items: end;
+}
+nav > ul {
+    display: flex;
+    padding: 10px;
+}
+nav > ul > li {
+    list-style: none;
+    margin-right: 15px;
+}
+nav > ul > li:hover {
+    color: var(--theme-main-color);
+}
+/* ROW 2 */
+.inner-introduction {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 20px;
+}
+.inner-introduction > img {
+    border-radius: 2px;
+    width: 280px;
+    height: 200px;
+}
+.introduction > span {
+    font-size: 1.5rem;
+    color: var(--theme-main-color);
+}
+/* ROW 3 */
+.inner-content {
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 0.8fr 0.9fr 0.9fr;
+    column-gap: 15px;
+}
+.inner-content-column {
+    display: grid;
+    row-gap: 10px;
+    white-space: nowrap;
+    justify-content: start;
+    align-content: start;
+}
+.inner-content-column > h1 {
+    font-size: 1rem;
+    color: var(--theme-submain-color);
+}
+.inner-content-column > img {
+    width: 180px;
+    height: 100px;
+}
+.contact > :nth-child(2) {
+    color: var(--theme-main-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.date {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
