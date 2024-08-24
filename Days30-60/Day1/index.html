@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <script src="https://unpkg.com/htmx.org@1.9.3"></script>
+    <title>Day 1</title>
+</head>
+<body class="bg-slate-800">
+    <div class="flex items-center p-6 max-w-sm mx-auto my-6 bg-slate-600 rounded-xl shadow-lg space-x-4">
+        <div class="shrink-0">
+            <img class="size-20" src="./art.png" alt="logo.png">
+        </div>
+        <div>
+            <div class="text-xl font-medium text-stone-300">Green Chat</div>
+            <p class="text-zinc-400">You have a new message!</p>
+        </div>
+    </div>
+
+    <div class="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+        <div class="min-w-12" hx-get="https://randomuser.me/api" hx-swap="none" hx-trigger="load">
+            <img class="block mx-auto h-24 w-24 rounded-full sm:mx-0 sm:shrink-0" id="user-image" alt="user-image" src="">
+        </div>
+        <div class="text-center space-y-2 sm:text-left">
+            <div class="space-y-0.5">
+                <p class="text-lg text-black font-semibold">Erin Lindford</p>
+                <p class="text-slate-500 font-medium">Product Engineer</p>
+            </div>
+            <button class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-400 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Message</button>
+        </div>
+    </div>
+
+    <script>
+        userImage = document.getElementById('user-image')
+        document.addEventListener('htmx:afterRequest', function(e) {
+            var data = JSON.parse(e.detail.xhr.responseText);
+            var imgSrc = data.results[0].picture.medium;
+            userImage.src = imgSrc
+        })
+    </script>
+</body>
+</html>

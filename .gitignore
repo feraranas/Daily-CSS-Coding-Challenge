@@ -1,2 +1,6 @@
 .DS_Store
 references.txt
+.vscode
+.history
+node_modules
+.env
